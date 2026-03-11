@@ -1,0 +1,14 @@
+---
+import WaveformIcon from './WaveformIcon.astro';
+import DownloadButton from './DownloadButton.astro';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+  <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 text-gray-900 no-underline">
+      <WaveformIcon size={24} />
+      <span class="text-lg font-semibold tracking-tight">WhisperFree</span>
+    </a>
+    <DownloadButton size="sm" />
+  </div>
+</nav>

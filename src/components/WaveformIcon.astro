@@ -1,0 +1,29 @@
+---
+interface Props {
+  size?: number;
+  animated?: boolean;
+  class?: string;
+}
+
+const { size = 32, animated = false, class: className = '' } = Astro.props;
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 32 32"
+  fill="none"
+  class={className}
+  aria-hidden="true"
+>
+  <rect x="4" y="10" width="3" height="12" rx="1.5" fill="currentColor" opacity="0.6"
+    style={animated ? 'animation: waveform 1.2s ease-in-out infinite; animation-delay: 0s; transform-origin: center;' : ''} />
+  <rect x="9" y="6" width="3" height="20" rx="1.5" fill="currentColor" opacity="0.8"
+    style={animated ? 'animation: waveform 1.2s ease-in-out infinite; animation-delay: 0.15s; transform-origin: center;' : ''} />
+  <rect x="14" y="3" width="3" height="26" rx="1.5" fill="currentColor"
+    style={animated ? 'animation: waveform 1.2s ease-in-out infinite; animation-delay: 0.3s; transform-origin: center;' : ''} />
+  <rect x="19" y="8" width="3" height="16" rx="1.5" fill="currentColor" opacity="0.8"
+    style={animated ? 'animation: waveform 1.2s ease-in-out infinite; animation-delay: 0.45s; transform-origin: center;' : ''} />
+  <rect x="24" y="11" width="3" height="10" rx="1.5" fill="currentColor" opacity="0.6"
+    style={animated ? 'animation: waveform 1.2s ease-in-out infinite; animation-delay: 0.6s; transform-origin: center;' : ''} />
+</svg>

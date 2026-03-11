@@ -1,0 +1,50 @@
+---
+const faqs = [
+  {
+    q: "Is it really free?",
+    a: "Yes, completely. No trial, no freemium, no in-app purchases. WhisperFree is free to download and use with no limitations."
+  },
+  {
+    q: "How accurate is the transcription?",
+    a: "WhisperFree uses a state-of-the-art Whisper voice model optimized for Apple Silicon, delivering significantly better accuracy than built-in macOS Dictation. You can also add custom vocabulary corrections for any words it gets wrong."
+  },
+  {
+    q: "Does it work offline?",
+    a: "Yes. After the initial model download (~150 MB on first launch), WhisperFree works completely offline. No internet connection needed for transcription."
+  },
+  {
+    q: "What languages are supported?",
+    a: "Currently WhisperFree uses an English-optimized model for the best accuracy. Multi-language support may come in a future update."
+  },
+  {
+    q: "Is it open source?",
+    a: "Not currently, but WhisperFree is built on open-source voice AI technology. The app itself is completely free to use."
+  },
+  {
+    q: "How is this different from macOS Dictation?",
+    a: "WhisperFree is significantly more accurate than macOS Dictation, with more fluid and natural transcription. It also processes everything locally — your audio never leaves your Mac. On top of that, you get streaming preview, custom vocabulary corrections, and voice commands that Dictation doesn't offer."
+  },
+];
+---
+
+<section id="faq" class="py-20 px-6 bg-gray-50">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Frequently asked questions</h2>
+
+    <div class="space-y-6">
+      {faqs.map(({ q, a }) => (
+        <details class="bg-white rounded-xl border border-gray-200 group">
+          <summary class="px-6 py-4 cursor-pointer font-semibold text-gray-900 flex items-center justify-between list-none">
+            {q}
+            <svg class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 shrink-0 ml-4" viewBox="0 0 20 20" fill="none">
+              <path d="M5 7l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="px-6 pb-4 text-gray-600">
+            {a}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
