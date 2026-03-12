@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>1.7</title>
-            <pubDate>Thu, 12 Mar 2026 14:39:09 -0400</pubDate>
-            <sparkle:version>1.7</sparkle:version>
-            <sparkle:shortVersionString>1.7</sparkle:shortVersionString>
+            <title>1.8</title>
+            <pubDate>Thu, 12 Mar 2026 16:41:25 -0400</pubDate>
+            <sparkle:version>1.8</sparkle:version>
+            <sparkle:shortVersionString>1.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v1.7</h2>
-<ul><li>Offer to move app to ~/Applications for seamless auto-updates</li><li>Better error message when updates fail with manual download fallback</li></ul>
+            <description><![CDATA[<h2>WhisperFree v1.8</h2>
+<ul><li>Fixed text insertion not working in Slack Mac app</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4157560" type="application/octet-stream" sparkle:edSignature="QWnJHfSTIn10e2I+y7IxjJWkQUXD0ZdZ/zmshM6xPG8ddE//ssP4wFsPqG4OX1aK/uYLdhTb1IqqUl7WYI7wCQ=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4157757" type="application/octet-stream" sparkle:edSignature="2eBSC6DQbCeNXHSuM7MWcq72e1O/pvM8XH+LRwCdzh+kpQVpHSbbMsKg0Ubo5d661vJNk6jDas4V6omlGZvGCA=="/>
         </item>
     </channel>
 </rss>
