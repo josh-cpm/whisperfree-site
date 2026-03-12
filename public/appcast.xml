@@ -11,7 +11,7 @@
             <description><![CDATA[<h2>WhisperFree v1.6</h2>
 <ul><li>Fix text insertion in browsers and Slack</li><li>Subtle synthesized blip sounds for recording start/stop</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree.dmg" length="4151265" type="application/octet-stream" sparkle:edSignature="XZUEpWO4D/zmlMwVToSM35DdELzffTycA5w2VITNBmGweFsQMS2v5SnfZHVSMazaZCx/Lw8XPtIrvio7GWUtAQ=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4151265" type="application/octet-stream" sparkle:edSignature="XZUEpWO4D/zmlMwVToSM35DdELzffTycA5w2VITNBmGweFsQMS2v5SnfZHVSMazaZCx/Lw8XPtIrvio7GWUtAQ=="/>
         </item>
     </channel>
 </rss>
