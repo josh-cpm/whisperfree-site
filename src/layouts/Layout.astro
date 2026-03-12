@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = 'WhisperFree — Free Local Voice-to-Text for Mac',
-  description = 'The most accurate free voice-to-text for Mac. State-of-the-art AI runs locally on your computer — more accurate and fluid than macOS Dictation. No cloud, no account, no data collection.',
+  title = 'WhisperFree — Local Voice-to-Text for Mac',
+  description = 'Voice-to-text that never leaves your Mac. State-of-the-art AI runs locally on Apple Silicon — private by architecture, fast by design. No cloud, no account, no data collection.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -21,23 +21,26 @@ const ogImage = new URL('/og-image.png', Astro.site);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL} />
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="free local voice to text mac, private dictation app macos, whisper transcription mac app, speech to text macOS, offline dictation mac" />
+    <meta name="keywords" content="local voice to text mac, private dictation app macos, whisper transcription mac app, speech to text macOS, offline dictation mac, apple silicon transcription" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="WhisperFree" />
+    <meta property="og:title" content="Voice to text. Nothing leaves your Mac." />
+    <meta property="og:description" content="State-of-the-art AI transcription running locally on Apple Silicon. Private by architecture. Fast by design." />
     <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content="Voice to text. Nothing leaves your Mac." />
+    <meta name="twitter:description" content="State-of-the-art AI transcription running locally on Apple Silicon. Private by architecture. Fast by design." />
     <meta name="twitter:image" content={ogImage} />
 
     <!-- Fonts -->
@@ -61,7 +64,7 @@ const ogImage = new URL('/og-image.png', Astro.site);
       "downloadUrl": "https://whisperfree.app/download",
       "softwareVersion": "1.0",
       "fileSize": "150MB",
-      "softwareRequirements": "macOS 14.0 or later, Apple Silicon recommended"
+      "softwareRequirements": "macOS 14.0 or later, Apple Silicon required"
     })} />
   </head>
   <body class="bg-white text-gray-900 font-sans antialiased">

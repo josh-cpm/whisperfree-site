@@ -1,7 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <rect x="4" y="10" width="3" height="12" rx="1.5" fill="#0d9488" opacity="0.6"/>
-  <rect x="9" y="6" width="3" height="20" rx="1.5" fill="#0d9488" opacity="0.8"/>
-  <rect x="14" y="3" width="3" height="26" rx="1.5" fill="#0d9488"/>
-  <rect x="19" y="8" width="3" height="16" rx="1.5" fill="#0d9488" opacity="0.8"/>
-  <rect x="24" y="11" width="3" height="10" rx="1.5" fill="#0d9488" opacity="0.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <!-- Dark gradient background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+    <!-- Subtle teal glow -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- macOS squircle background -->
+  <rect width="1024" height="1024" rx="228" ry="228" fill="url(#bg)"/>
+
+  <!-- Subtle glow behind waveform -->
+  <circle cx="512" cy="512" r="360" fill="url(#glow)"/>
+
+  <!-- Waveform bars (5 bars, matching favicon proportions) -->
+  <!-- Bar 1 - short left -->
+  <rect x="272" y="368" width="64" height="288" rx="32" fill="#0d9488" opacity="0.6"/>
+  <!-- Bar 2 - medium left -->
+  <rect x="384" y="272" width="64" height="480" rx="32" fill="#0d9488" opacity="0.8"/>
+  <!-- Bar 3 - tallest center -->
+  <rect x="496" y="208" width="64" height="608" rx="32" fill="#0d9488"/>
+  <!-- Bar 4 - medium right -->
+  <rect x="608" y="304" width="64" height="416" rx="32" fill="#0d9488" opacity="0.8"/>
+  <!-- Bar 5 - short right -->
+  <rect x="720" y="384" width="64" height="256" rx="32" fill="#0d9488" opacity="0.6"/>
 </svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="30%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="iconBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- App icon (centered, above text) -->
+  <g transform="translate(516, 100)">
+    <rect width="168" height="168" rx="38" ry="38" fill="url(#iconBg)" stroke="#2a2a3e" stroke-width="1"/>
+    <rect x="42" y="55" width="11" height="58" rx="5.5" fill="#0d9488" opacity="0.6"/>
+    <rect x="60" y="39" width="11" height="90" rx="5.5" fill="#0d9488" opacity="0.8"/>
+    <rect x="78" y="29" width="11" height="110" rx="5.5" fill="#0d9488"/>
+    <rect x="96" y="44" width="11" height="80" rx="5.5" fill="#0d9488" opacity="0.8"/>
+    <rect x="114" y="58" width="11" height="52" rx="5.5" fill="#0d9488" opacity="0.6"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="340" text-anchor="middle" fill="white" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="48" font-weight="700" letter-spacing="-0.5">Voice to text.</text>
+  <text x="600" y="400" text-anchor="middle" fill="#0d9488" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="48" font-weight="700" letter-spacing="-0.5">Nothing leaves your Mac.</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="460" text-anchor="middle" fill="#9ca3af" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="22" font-weight="400">Private by architecture. Fast by design.</text>
+
+  <!-- Domain -->
+  <text x="600" y="560" text-anchor="middle" fill="#4b5563" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="18" font-weight="500">whisperfree.app</text>
+</svg>
