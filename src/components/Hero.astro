@@ -1,6 +1,16 @@
 ---
 import WaveformIcon from './WaveformIcon.astro';
 import DownloadButton from './DownloadButton.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Parse version from appcast.xml at build time
+let version = '';
+try {
+  const appcast = fs.readFileSync(path.join(process.cwd(), 'public', 'appcast.xml'), 'utf-8');
+  const match = appcast.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/);
+  if (match) version = match[1];
+} catch {}
 ---
 
 <section class="pt-32 pb-20 px-6">
@@ -21,7 +31,7 @@ import DownloadButton from './DownloadButton.astro';
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <DownloadButton size="lg" />
-      <span class="text-sm text-gray-400">macOS 14+ &middot; Apple Silicon required</span>
+      <span class="text-sm text-gray-400">{version && <Fragment>v{version} &middot; </Fragment>}macOS 14+ &middot; Apple Silicon required</span>
     </div>
 
     <!-- Menu bar mockup -->
