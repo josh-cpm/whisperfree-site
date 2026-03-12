@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>WhisperFree Updates</title>
-    <link>https://whisperfree.app/appcast.xml</link>
+    <link>https://whisperfree.com/appcast.xml</link>
     <description>WhisperFree update feed</description>
     <language>en</language>
     <item>
@@ -20,7 +20,7 @@
         </ul>
       ]]></description>
       <enclosure
-        url="https://whisperfree.app/downloads/WhisperFree-latest.dmg"
+        url="https://whisperfree.com/downloads/WhisperFree-latest.dmg"
         length="4004994"
         type="application/octet-stream"
         sparkle:edSignature="oMki8luhuy249+vp0pRSPI3/Xrx5x07t/re61ejDjbFSTZBSPKulq16LorxEiMUK+hSqrF/K/nkYNopeRb6gCw=="
