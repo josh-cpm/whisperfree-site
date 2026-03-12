@@ -1,30 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <title>WhisperFree Updates</title>
-    <link>https://whisperfree.com/appcast.xml</link>
-    <description>WhisperFree update feed</description>
-    <language>en</language>
-    <item>
-      <title>Version 1.2</title>
-      <pubDate>Thu, 12 Mar 2026 12:06:14 -0400</pubDate>
-      <sparkle:version>1.2</sparkle:version>
-      <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[
-        <h2>WhisperFree v1.2</h2>
-        <ul>
-          <li>Background transcription cache for faster end-to-text latency</li>
-          <li>Skip 150ms activation delay for accessibility text insertion</li>
-          <li>Show app in Force Quit window (Cmd+Opt+Esc)</li>
-        </ul>
-      ]]></description>
-      <enclosure
-        url="https://whisperfree.com/downloads/WhisperFree-latest.dmg"
-        length="4004994"
-        type="application/octet-stream"
-        sparkle:edSignature="oMki8luhuy249+vp0pRSPI3/Xrx5x07t/re61ejDjbFSTZBSPKulq16LorxEiMUK+hSqrF/K/nkYNopeRb6gCw=="
-      />
-    </item>
-  </channel>
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>WhisperFree</title>
+        <item>
+            <title>1.3</title>
+            <pubDate>Thu, 12 Mar 2026 12:26:02 -0400</pubDate>
+            <sparkle:version>1.3</sparkle:version>
+            <sparkle:shortVersionString>1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h2>WhisperFree v1.3</h2>
+<ul><li>Fix auto-update feed URL</li><li>Performance benchmarking instrumentation</li></ul>
+]]></description>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree.dmg" length="4010892" type="application/octet-stream" sparkle:edSignature="tczf/wRt4Ka//S1jAn8QI/ZGeZiipNg94Kl2X7W42D157D9cApD8GT/DN14gIlp4eqkJmzk/ezaerVpyqQTfAQ=="/>
+        </item>
+    </channel>
 </rss>
