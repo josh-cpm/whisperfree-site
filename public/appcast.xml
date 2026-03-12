@@ -6,26 +6,24 @@
     <description>WhisperFree update feed</description>
     <language>en</language>
     <item>
-      <title>Version 1.0</title>
-      <pubDate>Mon, 10 Mar 2026 12:00:00 +0000</pubDate>
-      <sparkle:version>1</sparkle:version>
-      <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+      <title>Version 1.2</title>
+      <pubDate>Thu, 12 Mar 2026 12:06:14 -0400</pubDate>
+      <sparkle:version>1.2</sparkle:version>
+      <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
       <description><![CDATA[
-        <h2>WhisperFree 1.0</h2>
+        <h2>WhisperFree v1.2</h2>
         <ul>
-          <li>Initial release</li>
-          <li>Local Whisper AI transcription</li>
-          <li>Streaming preview</li>
-          <li>Smart vocabulary corrections</li>
-          <li>Voice commands</li>
+          <li>Background transcription cache for faster end-to-text latency</li>
+          <li>Skip 150ms activation delay for accessibility text insertion</li>
+          <li>Show app in Force Quit window (Cmd+Opt+Esc)</li>
         </ul>
       ]]></description>
       <enclosure
         url="https://whisperfree.app/downloads/WhisperFree-latest.dmg"
-        length="0"
+        length="4004994"
         type="application/octet-stream"
-        sparkle:edSignature="SIGNATURE_HERE"
+        sparkle:edSignature="oMki8luhuy249+vp0pRSPI3/Xrx5x07t/re61ejDjbFSTZBSPKulq16LorxEiMUK+hSqrF/K/nkYNopeRb6gCw=="
       />
     </item>
   </channel>
