@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>1.9</title>
-            <pubDate>Thu, 12 Mar 2026 19:28:32 -0400</pubDate>
-            <sparkle:version>1.9</sparkle:version>
-            <sparkle:shortVersionString>1.9</sparkle:shortVersionString>
+            <title>2.0</title>
+            <pubDate>Thu, 12 Mar 2026 21:03:44 -0400</pubDate>
+            <sparkle:version>2.0</sparkle:version>
+            <sparkle:shortVersionString>2.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v1.9</h2>
-<ul><li>Markdown list formatting for bullet points and numbered lists</li><li>Recording start latency optimization</li><li>Simplified text insertion</li></ul>
+            <description><![CDATA[<h2>WhisperFree v2.0</h2>
+<ul><li>Dock app with settings window</li><li>Floating overlay pill with record and settings</li><li>Menu bar dropdown redesign</li><li>Update badge indicator</li><li>Deferred permission prompts</li><li>Wispr Flow import fix</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4161749" type="application/octet-stream" sparkle:edSignature="7fwzRXYMv/f2YcHoj7amL94KaZJfmT7wwzBW4fDaGMEbeEsha6qZNeQz7copBEvMo/F2qzLuRGhuF/6e3BYTDA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4208106" type="application/octet-stream" sparkle:edSignature="KytKJd2KFGYfhidSM/OAn0AfIu3QhXbAHA0H2TLaJ5tw8SJjBY+YIKIk9tjm4mxvOdX1hvox9yayPthWD1nJAg=="/>
         </item>
     </channel>
 </rss>
