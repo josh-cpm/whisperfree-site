@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>2.2</title>
-            <pubDate>Mon, 16 Mar 2026 13:25:54 -0400</pubDate>
-            <sparkle:version>2.2</sparkle:version>
-            <sparkle:shortVersionString>2.2</sparkle:shortVersionString>
+            <title>2.2.1</title>
+            <pubDate>Mon, 16 Mar 2026 13:34:49 -0400</pubDate>
+            <sparkle:version>2.2.1</sparkle:version>
+            <sparkle:shortVersionString>2.2.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v2.2</h2>
-<ul><li>Debug processing log: when debug mode is enabled a new Processing Log tab shows stage-by-stage post-processing details and writes JSONL logs for analysis</li></ul>
+            <description><![CDATA[<h2>WhisperFree v2.2.1</h2>
+<ul><li>Processing log now shows key-release-to-text-inserted latency in milliseconds</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4333716" type="application/octet-stream" sparkle:edSignature="7INBxqqTLJU51FwPnmu5/+XDj0PKOYV+MK39Qn8XrWooUrm6wsWHE9i+x0hX4B55d+m9XnL5GQ9mAsqd0cEyBQ=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4340619" type="application/octet-stream" sparkle:edSignature="+CRqwypa+ZWRkOx45OZ0e8UXSrRZiBMrGrRfN8Av/dshGMbBJDQ6F3ih43T5Iox58NeKCWSxcY9ZnpnYLrXiCA=="/>
         </item>
     </channel>
 </rss>
