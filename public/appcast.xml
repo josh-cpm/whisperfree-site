@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>2.1</title>
-            <pubDate>Thu, 12 Mar 2026 21:54:13 -0400</pubDate>
-            <sparkle:version>2.1</sparkle:version>
-            <sparkle:shortVersionString>2.1</sparkle:shortVersionString>
+            <title>2.2</title>
+            <pubDate>Mon, 16 Mar 2026 13:25:54 -0400</pubDate>
+            <sparkle:version>2.2</sparkle:version>
+            <sparkle:shortVersionString>2.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v2.1</h2>
-<ul><li>Redesigned onboarding with Wispr Flow migration</li><li>Combined permissions page with visual guidance</li><li>Try Your Shortcut demo with pill UI preview</li><li>Value-prop welcome screen</li></ul>
+            <description><![CDATA[<h2>WhisperFree v2.2</h2>
+<ul><li>Debug processing log: when debug mode is enabled a new Processing Log tab shows stage-by-stage post-processing details and writes JSONL logs for analysis</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4263674" type="application/octet-stream" sparkle:edSignature="SG+fcp5LZSNOtsohcLN6RJ8uEllgcJ4zxbGJyLMYvKRmz9xoLYbDsxTumRoCS1qfuftsCx4W9x1kySp7rt/OCQ=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4333716" type="application/octet-stream" sparkle:edSignature="7INBxqqTLJU51FwPnmu5/+XDj0PKOYV+MK39Qn8XrWooUrm6wsWHE9i+x0hX4B55d+m9XnL5GQ9mAsqd0cEyBQ=="/>
         </item>
     </channel>
 </rss>
