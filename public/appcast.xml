@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>2.4</title>
-            <pubDate>Tue, 17 Mar 2026 20:42:11 -0400</pubDate>
-            <sparkle:version>2.4</sparkle:version>
-            <sparkle:shortVersionString>2.4</sparkle:shortVersionString>
+            <title>2.5</title>
+            <pubDate>Tue, 17 Mar 2026 23:25:15 -0400</pubDate>
+            <sparkle:version>2.5</sparkle:version>
+            <sparkle:shortVersionString>2.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v2.4</h2>
-<ul><li>Remove preprocessing overhead for faster transcription</li><li>Optimize recording start latency with converter caching</li><li>Add key-release-to-text and model comparison benchmarks</li></ul>
+            <description><![CDATA[<h2>WhisperFree v2.5</h2>
+<ul><li>Faster transcription for 5-10s recordings</li><li>Background chunking starts earlier with smaller initial chunk</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4517274" type="application/octet-stream" sparkle:edSignature="Y7Tc4DmoV01R1svldX8nn+47FYj4dFQPzDACg+Jml3egOa9P01tGUfK/A/4nWLjuRQP4CmAbJSPheOvfgfrzDg=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4614002" type="application/octet-stream" sparkle:edSignature="s9A9V0eVHX/vJMgNWEm8/5NN6aYdDTyuxNcPRn7YtwUzuVeMIm+RzgMWiVo+ey8OfdbwBYsUGaNybrcpFAadAw=="/>
         </item>
     </channel>
 </rss>
