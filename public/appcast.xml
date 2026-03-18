@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>2.5</title>
-            <pubDate>Tue, 17 Mar 2026 23:25:15 -0400</pubDate>
-            <sparkle:version>2.5</sparkle:version>
-            <sparkle:shortVersionString>2.5</sparkle:shortVersionString>
+            <title>2.6</title>
+            <pubDate>Wed, 18 Mar 2026 12:51:25 -0400</pubDate>
+            <sparkle:version>2.6</sparkle:version>
+            <sparkle:shortVersionString>2.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v2.5</h2>
-<ul><li>Faster transcription for 5-10s recordings</li><li>Background chunking starts earlier with smaller initial chunk</li></ul>
+            <description><![CDATA[<h2>WhisperFree v2.6</h2>
+<ul><li>Refactored service architecture</li><li>Unified post-processing pipeline</li><li>Improved onboarding flow</li><li>Added tail capture tests</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4614002" type="application/octet-stream" sparkle:edSignature="s9A9V0eVHX/vJMgNWEm8/5NN6aYdDTyuxNcPRn7YtwUzuVeMIm+RzgMWiVo+ey8OfdbwBYsUGaNybrcpFAadAw=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4609341" type="application/octet-stream" sparkle:edSignature="Ah8MgOx6mt0UnrEleRFsMzGSHWvIheU74vKq7vrbHqq57GDl1gfqxlFmzNCCJaDzcc2IX+6KEe2gIXvTOyfBBw=="/>
         </item>
     </channel>
 </rss>
