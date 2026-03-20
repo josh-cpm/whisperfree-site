@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>2.7</title>
-            <pubDate>Thu, 19 Mar 2026 12:20:10 -0400</pubDate>
-            <sparkle:version>2.7</sparkle:version>
-            <sparkle:shortVersionString>2.7</sparkle:shortVersionString>
+            <title>2.8</title>
+            <pubDate>Thu, 19 Mar 2026 21:22:03 -0400</pubDate>
+            <sparkle:version>2.8</sparkle:version>
+            <sparkle:shortVersionString>2.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v2.7</h2>
-<ul><li>Fix major accuracy regression from v2.x speed optimizations</li><li>Always retranscribe full audio with final model at stop time</li><li>Restore temperature fallback retries for final transcription</li><li>Add pipeline accuracy tests to prevent future regressions</li></ul>
+            <description><![CDATA[<h2>WhisperFree v2.8</h2>
+<ul><li>Quick-add vocabulary and corrections from menu bar</li><li>Permissions UX overhaul with banners and success animations</li><li>Improved post-processing accuracy</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4600059" type="application/octet-stream" sparkle:edSignature="EI3DXiT4B6r9IHZzwRj+bihgVuA2da90/fX+QalQUPSEWi60+S1qwyJ1eZ8BD9j09Ek8JIpsTHKrwZ3sMqxPCw=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4658619" type="application/octet-stream" sparkle:edSignature="LvuYsyu01bLQrX97AhZD/k2kXwgdxpszRUE9SDezirpxKlWbfATWDzlmomiMTFUQKCFF6tuMO9EMzsgCXGEQCg=="/>
         </item>
     </channel>
 </rss>
