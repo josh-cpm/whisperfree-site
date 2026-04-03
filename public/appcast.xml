@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>3.0</title>
-            <pubDate>Thu, 02 Apr 2026 22:40:55 -0400</pubDate>
-            <sparkle:version>3.0</sparkle:version>
-            <sparkle:shortVersionString>3.0</sparkle:shortVersionString>
+            <title>3.1</title>
+            <pubDate>Thu, 02 Apr 2026 23:26:20 -0400</pubDate>
+            <sparkle:version>3.1</sparkle:version>
+            <sparkle:shortVersionString>3.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v3.0</h2>
-<ul><li>87-97% faster text insertion after recording</li><li>Background chunks now use final model during recording</li><li>Only tail audio transcribed on stop</li><li>Cross-chunk context for better accuracy at boundaries</li></ul>
+            <description><![CDATA[<h2>WhisperFree v3.1</h2>
+<ul><li>Contextual transcription toggle in Settings</li><li>Accuracy benchmark for chunked pipeline</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4678271" type="application/octet-stream" sparkle:edSignature="Za7AyvaApR6apIHUr3TLVEB/vsbtT4t7Mq/xZFgyu8vtWIIu9wYPCOk6t/jZZ/N+I105pfHfJNaGYOQv2Zm9BA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4680075" type="application/octet-stream" sparkle:edSignature="lvoSj17GIWmLWTqvBeRySfQSkGsXgVAdJuSzxTHXWUv3EHlcVBvP3qHbqQJerOO1JclLrihg83lBgFQh0F8IAA=="/>
         </item>
     </channel>
 </rss>
