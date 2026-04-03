@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>2.9</title>
-            <pubDate>Fri, 20 Mar 2026 00:20:18 -0400</pubDate>
-            <sparkle:version>2.9</sparkle:version>
-            <sparkle:shortVersionString>2.9</sparkle:shortVersionString>
+            <title>3.0</title>
+            <pubDate>Thu, 02 Apr 2026 22:40:55 -0400</pubDate>
+            <sparkle:version>3.0</sparkle:version>
+            <sparkle:shortVersionString>3.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v2.9</h2>
-<ul><li>Switch to multilingual Whisper models for better accent recognition</li><li>Improved temperature fallback for uncertain speech</li></ul>
+            <description><![CDATA[<h2>WhisperFree v3.0</h2>
+<ul><li>87-97% faster text insertion after recording</li><li>Background chunks now use final model during recording</li><li>Only tail audio transcribed on stop</li><li>Cross-chunk context for better accuracy at boundaries</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4658676" type="application/octet-stream" sparkle:edSignature="aJaEk5VyxCKMnqzX5bf7P4m9Dv/vKIQPWTTA9nXuhvhm92AsJaEnygHpqxlBkAXRCysr6zFtBE6Z6ngo5g/TBA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4678271" type="application/octet-stream" sparkle:edSignature="Za7AyvaApR6apIHUr3TLVEB/vsbtT4t7Mq/xZFgyu8vtWIIu9wYPCOk6t/jZZ/N+I105pfHfJNaGYOQv2Zm9BA=="/>
         </item>
     </channel>
 </rss>
