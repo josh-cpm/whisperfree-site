@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>3.2</title>
-            <pubDate>Sun, 12 Apr 2026 22:56:58 -0400</pubDate>
-            <sparkle:version>3.2</sparkle:version>
-            <sparkle:shortVersionString>3.2</sparkle:shortVersionString>
+            <title>3.3</title>
+            <pubDate>Sun, 12 Apr 2026 23:25:35 -0400</pubDate>
+            <sparkle:version>3.3</sparkle:version>
+            <sparkle:shortVersionString>3.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v3.2</h2>
-<ul><li>Faster transcription after long recordings</li><li>Fixed short single-word clips sometimes returning empty</li><li>Skip transcription on silent background chunks</li></ul>
+            <description><![CDATA[<h2>WhisperFree v3.3</h2>
+<ul><li>Added NVIDIA Parakeet model (new default — much faster on Apple Silicon)</li><li>Renamed Settings picker to Model with clearer labels</li><li>Fixed model picker not updating on selection</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4684887" type="application/octet-stream" sparkle:edSignature="ZsQ6J/C+cxFd71GPg89TiSJ47BxF6jSjkQ58nduyVzPAGX+ImnKTYZt2RtkKvt2ycaU1kMSBHzh3dJHo12qNCg=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="7124127" type="application/octet-stream" sparkle:edSignature="EYrvZGu3YOxkDVEiFx+W/yrqhhiGGSuqQQ+4KPA06Vct4JxRZvRsFFnzy7LIMpD+08NPH41K4Ki+OLoOancABw=="/>
         </item>
     </channel>
 </rss>
