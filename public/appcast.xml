@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>3.1</title>
-            <pubDate>Thu, 02 Apr 2026 23:26:20 -0400</pubDate>
-            <sparkle:version>3.1</sparkle:version>
-            <sparkle:shortVersionString>3.1</sparkle:shortVersionString>
+            <title>3.2</title>
+            <pubDate>Sun, 12 Apr 2026 22:56:58 -0400</pubDate>
+            <sparkle:version>3.2</sparkle:version>
+            <sparkle:shortVersionString>3.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v3.1</h2>
-<ul><li>Contextual transcription toggle in Settings</li><li>Accuracy benchmark for chunked pipeline</li></ul>
+            <description><![CDATA[<h2>WhisperFree v3.2</h2>
+<ul><li>Faster transcription after long recordings</li><li>Fixed short single-word clips sometimes returning empty</li><li>Skip transcription on silent background chunks</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4680075" type="application/octet-stream" sparkle:edSignature="lvoSj17GIWmLWTqvBeRySfQSkGsXgVAdJuSzxTHXWUv3EHlcVBvP3qHbqQJerOO1JclLrihg83lBgFQh0F8IAA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4684887" type="application/octet-stream" sparkle:edSignature="ZsQ6J/C+cxFd71GPg89TiSJ47BxF6jSjkQ58nduyVzPAGX+ImnKTYZt2RtkKvt2ycaU1kMSBHzh3dJHo12qNCg=="/>
         </item>
     </channel>
 </rss>
