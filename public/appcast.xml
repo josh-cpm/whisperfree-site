@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>4.0</title>
-            <pubDate>Mon, 13 Apr 2026 01:27:49 -0400</pubDate>
-            <sparkle:version>4.0</sparkle:version>
-            <sparkle:shortVersionString>4.0</sparkle:shortVersionString>
+            <title>4.1</title>
+            <pubDate>Tue, 14 Apr 2026 09:53:27 -0400</pubDate>
+            <sparkle:version>4.1</sparkle:version>
+            <sparkle:shortVersionString>4.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v4.0</h2>
-<ul><li>Apple Silicon only — Intel Macs stay on v3.3</li><li>Switched transcription to NVIDIA Parakeet TDT v2 on the Apple Neural Engine — ~3x faster and more accurate on clean speech</li><li>Custom Vocabulary now biases the decoder directly — rare names and jargon come through accurately</li><li>Removed the model picker and Contextual transcription toggle (Parakeet is the only engine)</li><li>First launch downloads ~820MB (Parakeet + CTC head</li><li>one-time)</li></ul>
+            <description><![CDATA[<h2>WhisperFree v4.1</h2>
+<ul><li>Settings button now opens on first click</li><li>Model-load progress shows in the floating pill</li><li>Floating pill defaults to bottom-right on first launch</li><li>Buttons show a pressed state when clicked</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4952503" type="application/octet-stream" sparkle:edSignature="SWejzVMim2cN76nZKMY852+bPe1iU6i+6mdme4rqk8FccUgtjy/ApdN4OGOQWVE1yxjVn7po87pJjHCexQ8QDQ=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4961115" type="application/octet-stream" sparkle:edSignature="vkv6aXt0yU7wIc0XOvZhjvTDkwt38dJQlfZrFiq9azJm6EK+aA09Swq9MvQ9iafjEwJFu0AbUQXadbf/MsiKBw=="/>
         </item>
     </channel>
 </rss>
