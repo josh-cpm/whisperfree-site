@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>4.1</title>
-            <pubDate>Tue, 14 Apr 2026 09:53:27 -0400</pubDate>
-            <sparkle:version>4.1</sparkle:version>
-            <sparkle:shortVersionString>4.1</sparkle:shortVersionString>
+            <title>4.2</title>
+            <pubDate>Mon, 20 Apr 2026 09:48:19 -0400</pubDate>
+            <sparkle:version>4.2</sparkle:version>
+            <sparkle:shortVersionString>4.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v4.1</h2>
-<ul><li>Settings button now opens on first click</li><li>Model-load progress shows in the floating pill</li><li>Floating pill defaults to bottom-right on first launch</li><li>Buttons show a pressed state when clicked</li></ul>
+            <description><![CDATA[<h2>WhisperFree v4.2</h2>
+<ul><li>AI Polish (BETA) — opt-in Gemma 1B post-processing for punctuation and formatting</li><li>Editable AI prompt in Settings</li><li>Processing log now shows before/after diff for each stage</li><li>Removed broken list and number formatting regex stages</li><li>Improved whitespace and punctuation cleanup rules</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="4961115" type="application/octet-stream" sparkle:edSignature="vkv6aXt0yU7wIc0XOvZhjvTDkwt38dJQlfZrFiq9azJm6EK+aA09Swq9MvQ9iafjEwJFu0AbUQXadbf/MsiKBw=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17485274" type="application/octet-stream" sparkle:edSignature="G53UthPJQZGOTz0tdNlA/3qNmT9EhGA5M49bVgwuruudcbSxsiwYu4+7wMgDihmCF9Jyx9JJPsIq1H2XCTShDg=="/>
         </item>
     </channel>
 </rss>
