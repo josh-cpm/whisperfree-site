@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>4.4</title>
-            <pubDate>Sun, 03 May 2026 11:44:38 -0400</pubDate>
-            <sparkle:version>4.4</sparkle:version>
-            <sparkle:shortVersionString>4.4</sparkle:shortVersionString>
+            <title>4.4.1</title>
+            <pubDate>Sun, 03 May 2026 20:58:55 -0400</pubDate>
+            <sparkle:version>4.4.1</sparkle:version>
+            <sparkle:shortVersionString>4.4.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v4.4</h2>
-<ul><li>Redesigned onboarding</li></ul>
+            <description><![CDATA[<h2>WhisperFree v4.4.1</h2>
+<ul><li>Upgrade to Parakeet TDT v3 for improved transcription accuracy</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17702578" type="application/octet-stream" sparkle:edSignature="KmCSI0SfLReldKuKRYN7CuVD8NZDiMUVBvtKV6/K5+daOJcefbHyePzHyCz2LciTK5GJAIlb+321SCQ85paHDQ=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17703709" type="application/octet-stream" sparkle:edSignature="SsskaB/HvrT+lMaXX2G5MgRsqhhgLLRz/h2N9owney34dbIW6YFMdbNBdCgDBwA5zBoJoObzVM9mEM1cphIhCw=="/>
         </item>
     </channel>
 </rss>
