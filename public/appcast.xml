@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>4.5</title>
-            <pubDate>Tue, 05 May 2026 20:04:19 -0400</pubDate>
-            <sparkle:version>4.5</sparkle:version>
-            <sparkle:shortVersionString>4.5</sparkle:shortVersionString>
+            <title>4.5.1</title>
+            <pubDate>Wed, 06 May 2026 10:28:15 -0400</pubDate>
+            <sparkle:version>4.5.1</sparkle:version>
+            <sparkle:shortVersionString>4.5.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v4.5</h2>
-<ul><li>Remote transcription via Groq/OpenAI/AssemblyAI (optional alternative to local Parakeet)</li><li>List formatting with conservative auto-detection</li><li>Setting to disable vocabulary biasing</li><li>Fix: silent transcription hallucinations</li><li>Fix: vocabulary biasing was silently no-op (CTC token IDs not populated)</li><li>Fix: stuck Transcribing pill</li><li>Fix: stray .. artifacts in punctuation</li></ul>
+            <description><![CDATA[<h2>WhisperFree v4.5.1</h2>
+<ul><li>Internal: fix crash symbolication in release pipeline</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17814767" type="application/octet-stream" sparkle:edSignature="qgSNfEgCg4OEeq2qhMS6vS8DTt/GQvP94ZlpArd6JwOHsuaYl4JQ7k/xOuVbj+rw0+Y5jIfpRbSIsMbJGNJdAA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17815493" type="application/octet-stream" sparkle:edSignature="r5FyOdWYhNB9COpRsAP5ZKzg1jvqA5gz3UAdVclXFIOpz1MK4qtnp60nUWwDV2X8hYB5q9nFoGYE8XYCGX9iAQ=="/>
         </item>
     </channel>
 </rss>
