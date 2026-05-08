@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>4.6.0</title>
-            <pubDate>Thu, 07 May 2026 09:56:31 -0400</pubDate>
-            <sparkle:version>4.6.0</sparkle:version>
-            <sparkle:shortVersionString>4.6.0</sparkle:shortVersionString>
+            <title>4.7.0</title>
+            <pubDate>Fri, 08 May 2026 16:08:59 -0400</pubDate>
+            <sparkle:version>4.7.0</sparkle:version>
+            <sparkle:shortVersionString>4.7.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v4.6.0</h2>
-<ul><li>Push-to-talk reliability fix: short utterances no longer return empty</li><li>New tip when recording produces no transcribable speech</li><li>New tip when holding hotkey >1s with silent mic</li><li>~12% faster transcription for typical recordings (≤14s)</li></ul>
+            <description><![CDATA[<h2>WhisperFree v4.7.0</h2>
+<ul><li>New Stats view shows weekly and all-time transcription usage</li><li>Restructured Settings sidebar with 5 cleaner sections</li><li>Simplified menu popover with Show all link to History</li><li>Auto-enable new post-processing stages for existing users (list formatting whitespace cleanup)</li><li>Stream Live Logs button in Diagnostics for easier debugging</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17837735" type="application/octet-stream" sparkle:edSignature="r+vxD6cC5vGAq/rh7o8adyXfgum6HDUrQWb+4sSjut+BZraHl34bwF+MfMsLD7sjxo/2Jg3J7nM4dKSpgn/xDA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17890034" type="application/octet-stream" sparkle:edSignature="HPr7hTskrXYgG1KX6MscOHV9LMn6OK8weRwywy5k+YvNJyHrlXCOOCZt1UyF5IcTe936odUYF0EiL5IdcQsvAA=="/>
         </item>
     </channel>
 </rss>
