@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import fs from 'node:fs';
+import path from 'node:path';
 
 interface Props {
   title?: string;
@@ -7,12 +9,19 @@ interface Props {
 }
 
 const {
-  title = 'WhisperFree — Local Voice-to-Text for Mac',
-  description = 'Voice-to-text that never leaves your Mac. State-of-the-art AI runs locally on Apple Silicon — private by architecture, fast by design. No cloud, no account, no data collection.',
+  title = 'WhisperFree — Fast, Private Dictation for Mac',
+  description = 'A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice. Hold Fn to dictate — your words land at the cursor, never leave your Mac.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og-image.png', Astro.site);
+
+let appVersion = '1.0';
+try {
+  const appcast = fs.readFileSync(path.join(process.cwd(), 'public', 'appcast.xml'), 'utf-8');
+  const match = appcast.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/);
+  if (match) appVersion = match[1];
+} catch {}
 ---
 
 <!doctype html>
@@ -27,20 +36,20 @@ const ogImage = new URL('/og-image.png', Astro.site);
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="keywords" content="local voice to text mac, private dictation app macos, whisper transcription mac app, speech to text macOS, offline dictation mac, apple silicon transcription" />
+    <meta name="keywords" content="fastest dictation mac, local voice to text mac, parakeet tdt mac, low latency dictation, on-device speech to text, custom vocabulary dictation, apple silicon transcription, offline dictation mac" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="WhisperFree" />
-    <meta property="og:title" content="Voice to text. Nothing leaves your Mac." />
-    <meta property="og:description" content="State-of-the-art AI transcription running locally on Apple Silicon. Private by architecture. Fast by design." />
+    <meta property="og:title" content="Fast dictation. Fully private. Free." />
+    <meta property="og:description" content="A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice. Local on your Mac. Free." />
     <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Voice to text. Nothing leaves your Mac." />
-    <meta name="twitter:description" content="State-of-the-art AI transcription running locally on Apple Silicon. Private by architecture. Fast by design." />
+    <meta name="twitter:title" content="Fast dictation. Fully private. Free." />
+    <meta name="twitter:description" content="A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice. Local on your Mac. Free." />
     <meta name="twitter:image" content={ogImage} />
 
     <!-- Fonts -->
@@ -62,7 +71,7 @@ const ogImage = new URL('/og-image.png', Astro.site);
       },
       "description": description,
       "downloadUrl": "https://whisperfree.app/download",
-      "softwareVersion": "1.0",
+      "softwareVersion": appVersion,
       "fileSize": "150MB",
       "softwareRequirements": "macOS 14.0 or later, Apple Silicon required"
     })} />

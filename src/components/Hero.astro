@@ -20,35 +20,17 @@ try {
     </div>
 
     <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-      Voice to text.<br />
-      <span class="text-teal-600">Nothing leaves your Mac.</span>
+      Dictation that's <span class="text-teal-600">instant</span><br />
+      and <span class="text-teal-600">stays on your Mac</span>.
     </h1>
 
     <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-      State-of-the-art AI transcription running entirely on your computer. Local means private. Local means fast.
-      No cloud. No account. No data collection. Free to download.
+      A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice.
     </p>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <DownloadButton size="lg" />
       <span class="text-sm text-gray-400">{version && <Fragment>v{version} &middot; </Fragment>}macOS 14+ &middot; Apple Silicon required</span>
-    </div>
-
-    <!-- Menu bar mockup -->
-    <div class="mt-16 flex justify-center">
-      <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 max-w-sm w-full shadow-sm">
-        <div class="flex items-center gap-2 mb-3 pb-3 border-b border-gray-200">
-          <WaveformIcon size={18} class="text-teal-600" />
-          <span class="text-sm font-medium text-gray-700">WhisperFree</span>
-          <span class="ml-auto flex h-2 w-2">
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-        </div>
-        <div class="text-left text-sm text-gray-600 space-y-1">
-          <p class="font-mono text-xs text-gray-400">Transcribing...</p>
-          <p class="text-gray-800">The quick brown fox jumps over the<span class="inline-block w-0.5 h-4 bg-teal-500 ml-0.5 align-text-bottom" style="animation: waveform 1s ease-in-out infinite;"></span></p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
