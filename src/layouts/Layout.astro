@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import fs from 'node:fs';
+import path from 'node:path';
 
 interface Props {
   title?: string;
@@ -8,11 +10,18 @@ interface Props {
 
 const {
   title = 'WhisperFree — Fast, Private Dictation for Mac',
-  description = 'Hold Fn, talk, release. Your words land at the cursor — instantly, and only on your Mac. Free. No cloud, no account.',
+  description = 'A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice. Hold Fn to dictate — your words land at the cursor, never leave your Mac.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL('/og-image.png', Astro.site);
+
+let appVersion = '1.0';
+try {
+  const appcast = fs.readFileSync(path.join(process.cwd(), 'public', 'appcast.xml'), 'utf-8');
+  const match = appcast.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/);
+  if (match) appVersion = match[1];
+} catch {}
 ---
 
 <!doctype html>
@@ -34,13 +43,13 @@ const ogImage = new URL('/og-image.png', Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="WhisperFree" />
     <meta property="og:title" content="Fast dictation. Fully private. Free." />
-    <meta property="og:description" content="Hold Fn, talk, release. Your words land at the cursor — instantly, and only on your Mac." />
+    <meta property="og:description" content="A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice. Local on your Mac. Free." />
     <meta property="og:image" content={ogImage} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Fast dictation. Fully private. Free." />
-    <meta name="twitter:description" content="Hold Fn, talk, release. Your words land at the cursor — instantly, and only on your Mac." />
+    <meta name="twitter:description" content="A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice. Local on your Mac. Free." />
     <meta name="twitter:image" content={ogImage} />
 
     <!-- Fonts -->
@@ -62,7 +71,7 @@ const ogImage = new URL('/og-image.png', Astro.site);
       },
       "description": description,
       "downloadUrl": "https://whisperfree.app/download",
-      "softwareVersion": "1.0",
+      "softwareVersion": appVersion,
       "fileSize": "150MB",
       "softwareRequirements": "macOS 14.0 or later, Apple Silicon required"
     })} />
