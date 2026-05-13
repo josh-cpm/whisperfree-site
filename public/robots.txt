@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://whisperfree.app/sitemap-index.xml
+Sitemap: https://whisperfree.com/sitemap-index.xml
