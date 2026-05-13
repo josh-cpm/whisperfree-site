@@ -29,11 +29,11 @@
   </g>
 
   <!-- Title -->
-  <text x="600" y="340" text-anchor="middle" fill="white" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="48" font-weight="700" letter-spacing="-0.5">Voice to text.</text>
-  <text x="600" y="400" text-anchor="middle" fill="#0d9488" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="48" font-weight="700" letter-spacing="-0.5">Nothing leaves your Mac.</text>
+  <text x="600" y="340" text-anchor="middle" fill="white" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="56" font-weight="700" letter-spacing="-1">Fast dictation.</text>
+  <text x="600" y="408" text-anchor="middle" fill="#0d9488" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="56" font-weight="700" letter-spacing="-1">Fully private. Free.</text>
 
   <!-- Subtitle -->
-  <text x="600" y="460" text-anchor="middle" fill="#9ca3af" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="22" font-weight="400">Private by architecture. Fast by design.</text>
+  <text x="600" y="468" text-anchor="middle" fill="#9ca3af" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="22" font-weight="400">Alternative to Wispr Flow, Superwhisper, and Aqua Voice.</text>
 
   <!-- Domain -->
   <text x="600" y="560" text-anchor="middle" fill="#4b5563" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="18" font-weight="500">whisperfree.app</text>
