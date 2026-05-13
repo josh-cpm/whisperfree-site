@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://whisperfree.app',
+  site: 'https://whisperfree.com',
   vite: {
     plugins: [tailwindcss()]
   },
