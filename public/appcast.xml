@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>4.7.0</title>
-            <pubDate>Fri, 08 May 2026 16:08:59 -0400</pubDate>
-            <sparkle:version>4.7.0</sparkle:version>
-            <sparkle:shortVersionString>4.7.0</sparkle:shortVersionString>
+            <title>4.8.0</title>
+            <pubDate>Mon, 18 May 2026 20:41:10 -0400</pubDate>
+            <sparkle:version>4.8.0</sparkle:version>
+            <sparkle:shortVersionString>4.8.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v4.7.0</h2>
-<ul><li>New Stats view shows weekly and all-time transcription usage</li><li>Restructured Settings sidebar with 5 cleaner sections</li><li>Simplified menu popover with Show all link to History</li><li>Auto-enable new post-processing stages for existing users (list formatting whitespace cleanup)</li><li>Stream Live Logs button in Diagnostics for easier debugging</li></ul>
+            <description><![CDATA[<h2>WhisperFree v4.8.0</h2>
+<ul><li>Fixed AirPods and Bluetooth mics silently capturing no audio</li><li>Added microphone picker to the menu bar popover</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17890034" type="application/octet-stream" sparkle:edSignature="HPr7hTskrXYgG1KX6MscOHV9LMn6OK8weRwywy5k+YvNJyHrlXCOOCZt1UyF5IcTe936odUYF0EiL5IdcQsvAA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="17904575" type="application/octet-stream" sparkle:edSignature="m0ZO5gZwt5iJbgV1QClJtV/UKBtZO3uhmR+QIFsncHQYjlzT4tH6lq5fiYXsOjcDpRlidV4xwmGTV9YObUylDA=="/>
         </item>
     </channel>
 </rss>
