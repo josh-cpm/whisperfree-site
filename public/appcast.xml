@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.0.0</title>
-            <pubDate>Tue, 19 May 2026 00:40:05 -0400</pubDate>
-            <sparkle:version>5.0.0</sparkle:version>
-            <sparkle:shortVersionString>5.0.0</sparkle:shortVersionString>
+            <title>5.1</title>
+            <pubDate>Tue, 19 May 2026 10:09:07 -0400</pubDate>
+            <sparkle:version>5.1</sparkle:version>
+            <sparkle:shortVersionString>5.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.0.0</h2>
-<ul><li>Add xAI Grok and ElevenLabs Scribe v2 transcription providers</li><li>Expand Groq and OpenAI to model variants in a single 7-option picker</li><li>Fix AssemblyAI 400 error and speed up polling</li><li>Vocabulary biasing now sent to every remote provider</li><li>Remove AI Polish (beta) and Domain Profiles</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.1</h2>
+<ul><li>Fix trailing space dropped when dictating consecutive transcriptions into terminals (iTerm2/Terminal/Ghostty)</li><li>Fix first transcription being silent after waking Mac from sleep</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5374667" type="application/octet-stream" sparkle:edSignature="RLRVj9W2j+X3Sup3jIE/oowtyPWZ7S4AeeAzibt31EWvVrOI5XGFuXp9SAFxz+BxOZY8mPebJ/XJHUVcnM9WBw=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5376897" type="application/octet-stream" sparkle:edSignature="fHJDQ605Mx0N2hn4AoAiBFb1xT6+cm2mdyE+uLUjn2NvcsMyihUa1WbGfkcPr9XZAgwBLeRZSaZTFvObjzQlDw=="/>
         </item>
     </channel>
 </rss>
