@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.1</title>
-            <pubDate>Tue, 19 May 2026 10:09:07 -0400</pubDate>
-            <sparkle:version>5.1</sparkle:version>
-            <sparkle:shortVersionString>5.1</sparkle:shortVersionString>
+            <title>5.2</title>
+            <pubDate>Thu, 28 May 2026 21:22:36 -0400</pubDate>
+            <sparkle:version>5.2</sparkle:version>
+            <sparkle:shortVersionString>5.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.1</h2>
-<ul><li>Fix trailing space dropped when dictating consecutive transcriptions into terminals (iTerm2/Terminal/Ghostty)</li><li>Fix first transcription being silent after waking Mac from sleep</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.2</h2>
+<ul><li>Fixed the built-in microphone capturing too quietly</li><li>which caused recordings to be dropped as no speech detected</li><li>Removed a phantom audio input device that could appear in the microphone picker</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5376897" type="application/octet-stream" sparkle:edSignature="fHJDQ605Mx0N2hn4AoAiBFb1xT6+cm2mdyE+uLUjn2NvcsMyihUa1WbGfkcPr9XZAgwBLeRZSaZTFvObjzQlDw=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5378975" type="application/octet-stream" sparkle:edSignature="WU9Nm5mgE32IBMveeIrnEiP3mw2njczKlPCABvuJnR3jQWETkAuQiiTsh1V/6NINQ9WOlN4YL7X9mXfPlTFwAw=="/>
         </item>
     </channel>
 </rss>
