@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.2</title>
-            <pubDate>Thu, 28 May 2026 21:22:36 -0400</pubDate>
-            <sparkle:version>5.2</sparkle:version>
-            <sparkle:shortVersionString>5.2</sparkle:shortVersionString>
+            <title>5.3</title>
+            <pubDate>Tue, 02 Jun 2026 23:49:47 -0400</pubDate>
+            <sparkle:version>5.3</sparkle:version>
+            <sparkle:shortVersionString>5.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.2</h2>
-<ul><li>Fixed the built-in microphone capturing too quietly</li><li>which caused recordings to be dropped as no speech detected</li><li>Removed a phantom audio input device that could appear in the microphone picker</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.3</h2>
+<ul><li>Filter out repetition-loop hallucinations (e.g. the the the…) from transcriptions</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5378975" type="application/octet-stream" sparkle:edSignature="WU9Nm5mgE32IBMveeIrnEiP3mw2njczKlPCABvuJnR3jQWETkAuQiiTsh1V/6NINQ9WOlN4YL7X9mXfPlTFwAw=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5384606" type="application/octet-stream" sparkle:edSignature="uSydWzv+BLpeo9ne7ORNHQlqMdjKHxn2QlrcTIov9kTve7SGK6fcpNnKP7hUdOl9hELgROltWWIvh7cvdRN0DA=="/>
         </item>
     </channel>
 </rss>
