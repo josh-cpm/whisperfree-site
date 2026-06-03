@@ -21,13 +21,18 @@ export const config = { path: "/appcast.xml" };
 
 export default async (request, context) => {
   try {
+    // Only count real Sparkle update checks. Sparkle's User-Agent looks like
+    // "WhisperFree/5.3 Sparkle/2.x" — this excludes browsers, crawlers,
+    // uptime monitors, and manual curls that would otherwise inflate the count.
+    const ua = request.headers.get("user-agent") || "";
+
     const ip =
       context.ip ||
       request.headers.get("x-nf-client-connection-ip") ||
       request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       "";
 
-    if (ip) {
+    if (ua.includes("Sparkle") && ip) {
       const salt = Netlify.env.get("INSTALL_SALT") || "whisperfree-unsalted";
       const period = new Date().toISOString().slice(0, 7); // YYYY-MM
       const data = new TextEncoder().encode(`${salt}:${period}:${ip}`);
@@ -37,10 +42,18 @@ export default async (request, context) => {
         .join("");
 
       const store = getStore("install-pings");
-      await store.set(`${period}/${hash}`, "1");
+      // Record without delaying the feed: waitUntil keeps the function alive
+      // until the write finishes, but context.next() returns immediately.
+      context.waitUntil(
+        store
+          .set(`${period}/${hash}`, "1")
+          .catch((err) => console.error("appcast counter write failed:", err)),
+      );
     }
-  } catch (_) {
-    // Never let logging break the update feed.
+  } catch (err) {
+    // Never let counting break the update feed — but do surface it in logs
+    // so a misconfiguration (e.g. Blobs not provisioned) is visible.
+    console.error("appcast counter error:", err);
   }
 
   return context.next();

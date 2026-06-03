@@ -15,7 +15,7 @@ export const config = { path: "/stats" };
 export default async (request) => {
   const url = new URL(request.url);
   const token = url.searchParams.get("token");
-  const expected = Netlify.env.get("STATS_TOKEN");
+  const expected = process.env.STATS_TOKEN;
 
   if (!expected || token !== expected) {
     return new Response("Unauthorized\n", { status: 401 });
