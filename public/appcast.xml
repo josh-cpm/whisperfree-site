@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.4</title>
-            <pubDate>Wed, 03 Jun 2026 17:26:22 -0400</pubDate>
-            <sparkle:version>5.4</sparkle:version>
-            <sparkle:shortVersionString>5.4</sparkle:shortVersionString>
+            <title>5.5</title>
+            <pubDate>Tue, 09 Jun 2026 17:20:57 -0400</pubDate>
+            <sparkle:version>5.5</sparkle:version>
+            <sparkle:shortVersionString>5.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.4</h2>
-<ul><li>Better pickup of quiet and soft speech</li><li>Fewer false no speech detected rejections</li><li>Improved filtering of spurious transcriptions on silence</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.5</h2>
+<ul><li>Smarter capitalization and punctuation for short phrases and fragments</li><li>Fixed first recording after launch sometimes capturing no audio</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5385675" type="application/octet-stream" sparkle:edSignature="g/8Lgx6aGhoeYw1YrAaBYfwxSLPp9JH7lBdK7bQSgLN26lVcS6AL434IUoD8bPwwVvC4fw++E2Hoj8+6pVP6DQ=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5413745" type="application/octet-stream" sparkle:edSignature="7Ii3/0TOf7k84iCOervr3CzUN+Xj02NGp36ZpP+gCrl8zrar3XXJrvh76V25NEA8yP+85Gn8H0OmO45S2kWIAw=="/>
         </item>
     </channel>
 </rss>
