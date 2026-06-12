@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.6</title>
-            <pubDate>Thu, 11 Jun 2026 17:39:27 -0400</pubDate>
-            <sparkle:version>5.6</sparkle:version>
-            <sparkle:shortVersionString>5.6</sparkle:shortVersionString>
+            <title>5.7</title>
+            <pubDate>Fri, 12 Jun 2026 14:37:47 -0400</pubDate>
+            <sparkle:version>5.7</sparkle:version>
+            <sparkle:shortVersionString>5.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.6</h2>
-<ul><li>Improved speech detection: reduced false hallucination drops and collapsed long internal silences for more complete transcription</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.7</h2>
+<ul><li>Bug fixes: crash-safe file paths</li><li>lock hygiene</li><li>dictionary view deletion fix</li><li>keychain prompt fix in local mode</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5415537" type="application/octet-stream" sparkle:edSignature="F7AjuiJu4tQSRxyrW7n9PCD4TPG0ydYIZ1T1FfnawUixKIWVVV1X4HiH52HmwUiZJsAH6C9WiWh5mjAnyxsEAg=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5415945" type="application/octet-stream" sparkle:edSignature="y4Ziwa6XLp4l0Omi+o+M1XJ/cmAKwHIUSZBSPKBxeV1LJzIza0eBPRoVqHcf4KD2bGtM4oCkgjr4NG2NCVs0Bg=="/>
         </item>
     </channel>
 </rss>
