@@ -6,11 +6,13 @@ import path from 'node:path';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
 const {
   title = 'WhisperFree — Fast, Private Dictation for Mac',
   description = 'A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice. Hold Fn to dictate — your words land at the cursor, never leave your Mac.',
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -33,6 +35,7 @@ try {
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="512x512" href="/apple-touch-icon.png" />
     <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <title>{title}</title>
     <meta name="description" content={description} />

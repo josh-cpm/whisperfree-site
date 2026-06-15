@@ -8,5 +8,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [sitemap()]
+  integrations: [sitemap({
+    // /update is the destination for the in-app re-download notice, not a
+    // public landing page — keep it out of the sitemap (and noindex'd).
+    filter: (page) => !page.endsWith('/update/'),
+  })]
 });
