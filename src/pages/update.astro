@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import DownloadButton from '../components/DownloadButton.astro';
+---
+
+<Layout
+  title="Update WhisperFree — One-Time Manual Update"
+  description="A one-time manual update is needed to keep WhisperFree updating automatically. Download the latest version and replace your current app — your settings and permissions carry over."
+  noindex={true}
+>
+  <Nav />
+  <main class="pt-16">
+    <section class="py-20 px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-sm font-semibold text-teal-600 mb-3">Update available</p>
+        <h1 class="text-4xl font-bold mb-4">A quick one-time update</h1>
+        <p class="text-lg text-gray-600 mb-8">
+          We made a behind-the-scenes change to how WhisperFree is signed.
+          Because of that, this one update can&rsquo;t install itself automatically &mdash;
+          you just need to download the latest version once. After this, automatic
+          updates work normally again.
+        </p>
+
+        <DownloadButton size="lg" />
+        <p class="text-sm text-gray-500 mt-3">Free &middot; macOS 14.0+ &middot; Apple Silicon</p>
+
+        <!-- Reassurance: nothing is lost -->
+        <div class="mt-12 bg-teal-50 rounded-2xl border border-teal-100 p-6 text-left">
+          <p class="font-semibold text-teal-900 mb-1">Your setup carries over</p>
+          <p class="text-sm text-teal-800">
+            Your dictionary, history, settings, and microphone &amp; accessibility
+            permissions all stay exactly as they are. Nothing to set up again.
+          </p>
+        </div>
+
+        <!-- How to install -->
+        <div class="mt-6 bg-gray-50 rounded-2xl border border-gray-200 p-6 text-left">
+          <p class="font-semibold mb-3">How to install</p>
+          <ol class="text-sm text-gray-600 space-y-2 list-decimal list-inside">
+            <li>Click <strong>Download Free</strong> above.</li>
+            <li>Open the downloaded <strong>.dmg</strong> and drag WhisperFree into <strong>Applications</strong>, replacing the existing copy.</li>
+            <li>Launch WhisperFree &mdash; you&rsquo;re back to automatic updates.</li>
+          </ol>
+          <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200">
+            If WhisperFree doesn&rsquo;t respond to your hotkey right after updating,
+            quit and reopen it once. Still stuck? Re-grant Accessibility in
+            <strong>System Settings &rsaquo; Privacy &amp; Security &rsaquo; Accessibility</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
