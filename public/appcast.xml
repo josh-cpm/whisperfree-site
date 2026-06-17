@@ -3,15 +3,19 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.7</title>
-            <pubDate>Fri, 12 Jun 2026 14:37:47 -0400</pubDate>
-            <sparkle:version>5.7</sparkle:version>
-            <sparkle:shortVersionString>5.7</sparkle:shortVersionString>
+            <title>5.7.1</title>
+            <pubDate>Mon, 15 Jun 2026 18:17:19 -0400</pubDate>
+            <link>https://whisperfree.com/update</link>
+            <sparkle:informationalUpdate>
+                <sparkle:belowVersion>5.7.1</sparkle:belowVersion>
+            </sparkle:informationalUpdate>
+            <sparkle:version>5.7.1</sparkle:version>
+            <sparkle:shortVersionString>5.7.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.7</h2>
-<ul><li>Bug fixes: crash-safe file paths</li><li>lock hygiene</li><li>dictionary view deletion fix</li><li>keychain prompt fix in local mode</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.7.1</h2>
+<ul><li>Update-signing maintenance — one-time re-download required (see notice)</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5415945" type="application/octet-stream" sparkle:edSignature="y4Ziwa6XLp4l0Omi+o+M1XJ/cmAKwHIUSZBSPKBxeV1LJzIza0eBPRoVqHcf4KD2bGtM4oCkgjr4NG2NCVs0Bg=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5414459" type="application/octet-stream" sparkle:edSignature="D5BQHPUzxhEAXukXV4Q/MV9FsriFFAb+jFGBV0j8EVVIRYaQLdTou9DFRTWEypp4XwYC3DIsojKQ/MwoCd+bAw=="/>
         </item>
     </channel>
 </rss>
