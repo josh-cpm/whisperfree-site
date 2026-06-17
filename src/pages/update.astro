@@ -17,36 +17,25 @@ import DownloadButton from '../components/DownloadButton.astro';
         <p class="text-sm font-semibold text-teal-600 mb-3">Update available</p>
         <h1 class="text-4xl font-bold mb-4">A quick one-time update</h1>
         <p class="text-lg text-gray-600 mb-8">
-          We made a behind-the-scenes change to how WhisperFree is signed.
-          Because of that, this one update can&rsquo;t install itself automatically &mdash;
-          you just need to download the latest version once. After this, automatic
-          updates work normally again.
+          You&rsquo;ll need to reinstall WhisperFree once to get the next
+          version. It takes under a minute, and everything you&rsquo;ve set up
+          carries over.
         </p>
 
         <DownloadButton size="lg" />
         <p class="text-sm text-gray-500 mt-3">Free &middot; macOS 14.0+ &middot; Apple Silicon</p>
 
-        <!-- Reassurance: nothing is lost -->
-        <div class="mt-12 bg-teal-50 rounded-2xl border border-teal-100 p-6 text-left">
-          <p class="font-semibold text-teal-900 mb-1">Your setup carries over</p>
-          <p class="text-sm text-teal-800">
-            Your dictionary, history, settings, and microphone &amp; accessibility
-            permissions all stay exactly as they are. Nothing to set up again.
-          </p>
-        </div>
-
         <!-- How to install -->
-        <div class="mt-6 bg-gray-50 rounded-2xl border border-gray-200 p-6 text-left">
-          <p class="font-semibold mb-3">How to install</p>
+        <div class="mt-12 bg-gray-50 rounded-2xl border border-gray-200 p-6 text-left">
+          <p class="font-semibold mb-3">Three quick steps</p>
           <ol class="text-sm text-gray-600 space-y-2 list-decimal list-inside">
-            <li>Click <strong>Download Free</strong> above.</li>
-            <li>Open the downloaded <strong>.dmg</strong> and drag WhisperFree into <strong>Applications</strong>, replacing the existing copy.</li>
-            <li>Launch WhisperFree &mdash; you&rsquo;re back to automatic updates.</li>
+            <li>Click <strong>Download</strong> above.</li>
+            <li>Open the downloaded file and drag WhisperFree into <strong>Applications</strong>. Click <strong>Replace</strong> when your Mac asks.</li>
+            <li>Open WhisperFree. That&rsquo;s it &mdash; automatic updates are back on.</li>
           </ol>
           <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200">
-            If WhisperFree doesn&rsquo;t respond to your hotkey right after updating,
-            quit and reopen it once. Still stuck? Re-grant Accessibility in
-            <strong>System Settings &rsaquo; Privacy &amp; Security &rsaquo; Accessibility</strong>.
+            If your hotkey doesn&rsquo;t respond right after updating, quit
+            WhisperFree and open it again &mdash; that usually fixes it.
           </p>
         </div>
       </div>
