@@ -3,19 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.7.1</title>
-            <pubDate>Mon, 15 Jun 2026 18:17:19 -0400</pubDate>
-            <link>https://whisperfree.com/update</link>
-            <sparkle:informationalUpdate>
-                <sparkle:belowVersion>5.7.1</sparkle:belowVersion>
-            </sparkle:informationalUpdate>
-            <sparkle:version>5.7.1</sparkle:version>
-            <sparkle:shortVersionString>5.7.1</sparkle:shortVersionString>
+            <title>5.8</title>
+            <pubDate>Wed, 17 Jun 2026 14:38:43 -0400</pubDate>
+            <sparkle:version>5.8</sparkle:version>
+            <sparkle:shortVersionString>5.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.7.1</h2>
-<ul><li>Update-signing maintenance — one-time re-download required (see notice)</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.8</h2>
+<ul><li>Floating recording pill now defaults to the bottom-right and remembers where you drag it</li><li>Stability and internal improvements</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5414459" type="application/octet-stream" sparkle:edSignature="D5BQHPUzxhEAXukXV4Q/MV9FsriFFAb+jFGBV0j8EVVIRYaQLdTou9DFRTWEypp4XwYC3DIsojKQ/MwoCd+bAw=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5424753" type="application/octet-stream" sparkle:edSignature="nZlWuUtA5knqxwQfsG0HyAYFD2Vg7ibGo34kHJkZM/baVlQ0xIZuY2sZvu2EEdO7p0HIAnINBot6GLTxat1hDg=="/>
         </item>
     </channel>
 </rss>
