@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.8</title>
-            <pubDate>Wed, 17 Jun 2026 14:38:43 -0400</pubDate>
-            <sparkle:version>5.8</sparkle:version>
-            <sparkle:shortVersionString>5.8</sparkle:shortVersionString>
+            <title>5.8.1</title>
+            <pubDate>Mon, 22 Jun 2026 10:42:39 -0400</pubDate>
+            <sparkle:version>5.8.1</sparkle:version>
+            <sparkle:shortVersionString>5.8.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.8</h2>
-<ul><li>Floating recording pill now defaults to the bottom-right and remembers where you drag it</li><li>Stability and internal improvements</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.8.1</h2>
+<ul><li>Faster local transcription</li><li>More reliable model loading with automatic retry</li><li>Stability and reliability fixes</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5424753" type="application/octet-stream" sparkle:edSignature="nZlWuUtA5knqxwQfsG0HyAYFD2Vg7ibGo34kHJkZM/baVlQ0xIZuY2sZvu2EEdO7p0HIAnINBot6GLTxat1hDg=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5415465" type="application/octet-stream" sparkle:edSignature="t18Awe7vi/YlQaHLzIaZaOOzBbNF7fPo4epHFjqLqT0FXVafmVHFZG5xGKWQLXWbPlwfNvMNTXrcM3sDxeAZBA=="/>
         </item>
     </channel>
 </rss>
