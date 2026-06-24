@@ -3,15 +3,15 @@
     <channel>
         <title>WhisperFree</title>
         <item>
-            <title>5.8.1</title>
-            <pubDate>Mon, 22 Jun 2026 10:42:39 -0400</pubDate>
-            <sparkle:version>5.8.1</sparkle:version>
-            <sparkle:shortVersionString>5.8.1</sparkle:shortVersionString>
+            <title>5.8.2</title>
+            <pubDate>Tue, 23 Jun 2026 23:00:13 -0400</pubDate>
+            <sparkle:version>5.8.2</sparkle:version>
+            <sparkle:shortVersionString>5.8.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[<h2>WhisperFree v5.8.1</h2>
-<ul><li>Faster local transcription</li><li>More reliable model loading with automatic retry</li><li>Stability and reliability fixes</li></ul>
+            <description><![CDATA[<h2>WhisperFree v5.8.2</h2>
+<ul><li>Fix model download retry after incomplete cache</li><li>Repair corrupt model vocabulary cache during onboarding</li></ul>
 ]]></description>
-            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5415465" type="application/octet-stream" sparkle:edSignature="t18Awe7vi/YlQaHLzIaZaOOzBbNF7fPo4epHFjqLqT0FXVafmVHFZG5xGKWQLXWbPlwfNvMNTXrcM3sDxeAZBA=="/>
+            <enclosure url="https://whisperfree.com/downloads/WhisperFree-latest.dmg" length="5437444" type="application/octet-stream" sparkle:edSignature="CFib0MLfKE6sJEIs7TLqKmqQC6rvZ40IzsPipJi7Yk3intPc1yTeWPCN7edUS9TW9SV1HilD7QUjW89GUd8jBg=="/>
         </item>
     </channel>
 </rss>
