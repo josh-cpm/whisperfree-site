@@ -136,7 +136,10 @@ export interface PricingView {
  */
 export async function getPricingView(): Promise<PricingView> {
   const manifest = await getPricing();
-  const model = launchModel(manifest);
+  // A live kill-switch response may legitimately carry no model rows (`enabled: false`, empty
+  // `models`). Borrow the snapshot's model purely for display math so the build never dereferences
+  // undefined — the live `enabled` flag still governs whether cloud surfaces actually render.
+  const model = manifest.models[0] ?? (fallback as PricingManifest).models[0];
   return {
     manifest,
     model,

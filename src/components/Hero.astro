@@ -1,8 +1,15 @@
 ---
 import WaveformIcon from './WaveformIcon.astro';
 import DownloadButton from './DownloadButton.astro';
+import { getPricingView } from '../lib/pricing.ts';
 import fs from 'node:fs';
 import path from 'node:path';
+
+// Cloud copy/CTA is gated on the same kill switch as the rest of the cloud surfaces: when the
+// manifest is disabled, the hero falls back to local-only messaging so it never promises a feature
+// the site itself reports as paused.
+const { manifest } = await getPricingView();
+const cloudEnabled = manifest.enabled;
 
 // Parse version from appcast.xml at build time
 let version = '';
@@ -19,33 +26,56 @@ try {
       <WaveformIcon size={64} animated={true} class="text-teal-600" />
     </div>
 
-    <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-      Fast Mac dictation,<br />
-      with <span class="text-teal-600">control over the cloud.</span>
-    </h1>
+    {cloudEnabled ? (
+      <>
+        <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+          Fast Mac dictation,<br />
+          with <span class="text-teal-600">control over the cloud.</span>
+        </h1>
 
-    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-      WhisperFree runs locally on your Mac for free. When noise, names, accents, or jargon trip up
-      the local model, switch on a more accurate cloud model for pennies &mdash; billed by the
-      second, with no subscription and no account.
-    </p>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          WhisperFree runs locally on your Mac for free. When noise, names, accents, or jargon trip
+          up the local model, switch on a more accurate cloud model for pennies &mdash; billed by the
+          second, with no subscription and no account.
+        </p>
 
-    <p class="text-sm font-medium text-gray-500 mb-10">
-      Local by default &middot; Cloud by choice &middot; Paid only when used
-    </p>
+        <p class="text-sm font-medium text-gray-500 mb-10">
+          Local by default &middot; Cloud by choice &middot; Paid only when used
+        </p>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <DownloadButton size="lg" />
-      <a
-        href="/pricing"
-        class="text-base font-semibold text-teal-700 hover:text-teal-800 no-underline inline-flex items-center gap-1"
-      >
-        See cloud pricing
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <DownloadButton size="lg" />
+          <a
+            href="/pricing"
+            class="text-base font-semibold text-teal-700 hover:text-teal-800 no-underline inline-flex items-center gap-1"
+          >
+            See cloud pricing
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </>
+    ) : (
+      <>
+        <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+          Fast, private <span class="text-teal-600">Mac dictation.</span>
+        </h1>
+
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          WhisperFree runs entirely on your Mac &mdash; free, private, and on by default. Hold a
+          hotkey, speak naturally, and your words appear in the app you&rsquo;re already using.
+        </p>
+
+        <p class="text-sm font-medium text-gray-500 mb-10">
+          Local by default &middot; No account &middot; No subscription
+        </p>
+
+        <div class="flex items-center justify-center">
+          <DownloadButton size="lg" />
+        </div>
+      </>
+    )}
     <p class="text-sm text-gray-400 mt-5">{version && <Fragment>v{version} &middot; </Fragment>}macOS 14+ &middot; Apple Silicon required</p>
   </div>
 </section>
