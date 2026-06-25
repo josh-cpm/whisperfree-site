@@ -90,15 +90,20 @@ export interface PricingAnchors {
   hoursPerFiveDollars: number;
   /** ≈ months $5 lasts at one hour of dictation per week. */
   monthsPerFiveDollarsAtOneHourPerWeek: number;
+  /** Upper reference subscription (e.g. Wispr Flow Pro monthly at $15/mo). */
   subscriptionMonthly: number;
   subscriptionAnnual: number;
+  /** Lower reference subscription (e.g. Aqua Voice Pro annual at ~$8/mo). */
+  subscriptionMonthlyLow: number;
+  subscriptionAnnualLow: number;
 }
 
 /**
  * Concrete spend anchors (PMM §4b). The audio-cost anchors are derived from the model's per-hour
  * total so the prose numbers always match the manifest. `subscriptionMonthly`/`subscriptionAnnual`
- * are fixed reference points for a typical dictation subscription — not manifest outputs — used to
- * contrast per-second metering against a flat monthly fee.
+ * are fixed reference points for typical dictation subscriptions — not manifest outputs — used to
+ * contrast per-second metering against a flat monthly fee. The low/high pair brackets the real
+ * market (≈$8/mo annual to $15/mo monthly) so we never imply every competitor costs $180/year.
  */
 export function pricingAnchors(model: PricingModel): PricingAnchors {
   const totalPerHour = model.estimatedTotalCentsPerAudioHour;
@@ -109,6 +114,8 @@ export function pricingAnchors(model: PricingModel): PricingAnchors {
     monthsPerFiveDollarsAtOneHourPerWeek: Math.round(hoursPerFiveDollars / 4.33),
     subscriptionMonthly: 15,
     subscriptionAnnual: 180,
+    subscriptionMonthlyLow: 8,
+    subscriptionAnnualLow: 96,
   };
 }
 

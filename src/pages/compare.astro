@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import DownloadButton from '../components/DownloadButton.astro';
+import { getPricingView } from '../lib/pricing.ts';
+
+const { anchors } = await getPricingView();
+
+const title = 'WhisperFree vs Wispr Flow, Superwhisper & Aqua Voice';
+const description =
+  'A fair, factual comparison of Mac dictation apps. WhisperFree is local-first and free by default, with optional metered cloud — no account, no subscription.';
+
+// Kept deliberately fair (PR feedback §6 / review §5): the wedge is "local default + honest cloud
+// option," not "we're free and they're paid." Each row states what each product actually leads with.
+const rows = [
+  {
+    feature: 'Default mode',
+    whisperfree: 'Local, on-device',
+    others: 'Cloud-first (Superwhisper offers local)',
+  },
+  {
+    feature: 'Free tier',
+    whisperfree: 'Full local dictation, unlimited',
+    others: 'Word-capped free tiers',
+  },
+  {
+    feature: 'Paid model',
+    whisperfree: 'Metered cloud credits, by the second',
+    others: 'Monthly / annual subscriptions or lifetime license',
+  },
+  {
+    feature: 'Account required',
+    whisperfree: 'No',
+    others: 'Usually yes',
+  },
+  {
+    feature: 'What leaves your Mac',
+    whisperfree: 'Nothing in local mode; only clips you send in cloud mode',
+    others: 'Cloud-first apps transcribe in the cloud',
+  },
+];
+
+const picks = [
+  {
+    title: 'Choose WhisperFree',
+    body: 'You want local-first Mac dictation, no account, no subscription, and an optional metered cloud model for the clips where accuracy matters.',
+    highlight: true,
+  },
+  {
+    title: 'Choose Wispr Flow or Aqua Voice',
+    body: 'You want a polished, cloud-first writing workflow across devices and teams, and a subscription fits how you work.',
+    highlight: false,
+  },
+  {
+    title: 'Choose Superwhisper',
+    body: 'You want a highly configurable power-user app with local and cloud model options, and you’re comfortable paying for Pro.',
+    highlight: false,
+  },
+];
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+  <main>
+    <section class="pt-32 pb-16 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+          How WhisperFree compares
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Wispr Flow, Aqua Voice, and Superwhisper are all good apps. They differ from WhisperFree
+          mostly in one thing: <strong class="text-gray-900">who decides when your voice leaves your
+          Mac, and what you pay for it.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="pb-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="overflow-hidden rounded-2xl border border-gray-200">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead class="bg-gray-50 text-gray-500">
+              <tr>
+                <th class="px-5 py-4 font-medium"></th>
+                <th class="px-5 py-4 font-semibold text-teal-700">WhisperFree</th>
+                <th class="px-5 py-4 font-medium">Wispr / Aqua / Superwhisper</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr class="border-t border-gray-100 align-top">
+                  <td class="px-5 py-4 font-semibold text-gray-900">{row.feature}</td>
+                  <td class="px-5 py-4 text-gray-700">{row.whisperfree}</td>
+                  <td class="px-5 py-4 text-gray-600">{row.others}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-gray-500 mt-4">
+          Competitor details reflect each product’s public pricing and privacy pages and can change;
+          check theirs for the latest. WhisperFree cloud is metered at the provider’s cost plus a
+          flat 10&cent;/audio hour &mdash; $5 lasts roughly {anchors.hoursPerFiveDollars} hours.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Which one is for you?</h2>
+        <div class="space-y-4">
+          {picks.map((p) => (
+            <div class={`rounded-2xl p-6 border ${p.highlight ? 'bg-white border-teal-200' : 'bg-white border-gray-200'}`}>
+              <h3 class={`font-semibold mb-2 ${p.highlight ? 'text-teal-700' : 'text-gray-900'}`}>{p.title}</h3>
+              <p class="text-gray-600">{p.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Try the local default for free</h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Download WhisperFree, dictate locally for free, and reach for the cloud only when you
+          choose to. No account, no subscription.
+        </p>
+        <div class="flex justify-center">
+          <DownloadButton size="lg" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

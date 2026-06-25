@@ -22,7 +22,7 @@ const costCards = [
   },
   {
     value: `< $${anchors.subscriptionMonthly}/yr`,
-    label: `What most dictation users would spend — versus $${anchors.subscriptionAnnual} a year for a $${anchors.subscriptionMonthly}/month subscription.`,
+    label: `What most dictation users would spend — versus the $${anchors.subscriptionAnnualLow}–${anchors.subscriptionAnnual} a year of a typical $${anchors.subscriptionMonthlyLow}–${anchors.subscriptionMonthly}/month dictation subscription.`,
   },
 ];
 
@@ -30,7 +30,7 @@ const costCards = [
 const switchRows = [
   { context: 'Quiet room, clear speech', action: 'Stay local. It’s free and excellent.' },
   {
-    context: 'Noisy environment, accents, jargon, names',
+    context: 'Accents, names, jargon, and noisy rooms',
     action: `Switch to the cloud model — a clear accuracy jump where local struggles, about ~${anchors.perFifteenMinCents}¢ for 15 minutes of audio.`,
   },
   { context: 'Unsure', action: 'Stay local; switch the moment you hit a bad transcription.' },
@@ -50,12 +50,12 @@ const demoCloud =
     <section class="pt-32 pb-16 px-6">
       <div class="max-w-3xl mx-auto text-center">
         <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
-          Pay <span class="text-teal-600">at cost</span>, plus 10&cent; an hour.
+          Local dictation is <span class="text-teal-600">free.</span><br />Cloud is optional.
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          Local dictation is free and runs on your Mac. When you need more accuracy &mdash; noisy
-          rooms, heavy accents, technical jargon &mdash; switch on a cloud model, billed by the
-          second. No subscription. No account.
+          Dictation on your Mac costs nothing. When you need more accuracy &mdash; accents, names,
+          jargon, and noisy rooms &mdash; switch on a cloud model, billed by the second at the
+          provider&rsquo;s cost plus a flat 10&cent;. No subscription. No account.
         </p>
       </div>
     </section>
@@ -134,9 +134,9 @@ const demoCloud =
           <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-4">Where a cloud model helps</h2>
             <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              The local model is excellent in a quiet room. A frontier cloud model pulls ahead
-              exactly where dictation breaks down &mdash; background noise, accents, names, and
-              jargon. Same noisy clip, both models:
+              The local model is excellent in a quiet room. A more accurate cloud model pulls ahead
+              exactly where dictation breaks down &mdash; accents, names, jargon, and noisy rooms.
+              Same noisy clip, both models:
             </p>
             <div class="grid sm:grid-cols-2 gap-6">
               <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
@@ -196,18 +196,18 @@ const demoCloud =
                   distinct menu-bar state, and never happens silently.
                 </p>
               </div>
-              <div class="bg-amber-50 rounded-2xl p-6 border border-amber-100">
+              <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                 <h3 class="font-semibold text-gray-900 mb-2">What OpenAI does with it</h3>
                 <p class="text-gray-700">
-                  OpenAI&rsquo;s default API retention is up to 30 days for abuse monitoring, after
-                  which audio is deleted. We can&rsquo;t claim &ldquo;the provider keeps
-                  nothing&rdquo; at launch, so we&rsquo;re telling you plainly. See
+                  OpenAI&rsquo;s current docs list audio transcription requests as not used for
+                  training and not retained for abuse monitoring or application state. We don&rsquo;t
+                  control that policy, so if it changes we&rsquo;ll update this page. See
                   {' '}
                   <a
-                    href="https://platform.openai.com/docs/guides/your-data"
+                    href="https://developers.openai.com/api/docs/guides/your-data"
                     class="text-teal-700 underline"
                     rel="noopener"
-                  >OpenAI&rsquo;s data-retention policy</a>.
+                  >OpenAI&rsquo;s data controls</a>.
                 </p>
               </div>
             </div>

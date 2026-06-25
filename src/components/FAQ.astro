@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "What does OpenAI do with my audio?",
-    a: "OpenAI retains API audio for up to 30 days for abuse monitoring, then deletes it, and doesn't train on it. We can't offer a zero-retention guarantee at launch, so we're saying so plainly rather than burying it. Local mode avoids this entirely."
+    a: "OpenAI's current docs list audio transcription requests as not used for training and not retained for abuse monitoring or application state. We don't control that policy, so if it changes we'll update our pages. Either way, local mode avoids sending audio off your Mac at all."
   },
   {
     q: "Why trust this from an app built on “stays on your Mac”?",
@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "How does this compare to Wispr Flow, Superwhisper, or Aqua Voice?",
-    a: "Wispr Flow and Aqua Voice are paid cloud subscriptions — fast and polished, but your audio always leaves your Mac and you pay every month. Superwhisper is on-device like us, but paid. WhisperFree runs locally for free, and adds an optional pay-by-the-second cloud model only when you want the extra accuracy — so you're never locked into a subscription."
+    a: "Wispr Flow and Aqua Voice are cloud-first products with capped free tiers and subscription upgrades — polished, but transcription happens in the cloud and the full product is a monthly plan. Superwhisper is closer on local and offline use, but its advanced workflow is subscription or lifetime-license oriented. WhisperFree's difference is a free local default plus optional, metered cloud credits — no account, no subscription. There's a fuller side-by-side on our compare page."
   },
 ];
 ---
