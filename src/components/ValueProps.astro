@@ -10,17 +10,14 @@ const props = [
   {
     title: 'Dictation that keeps up',
     body: 'Hold a hotkey, speak naturally, and release. Your words land wherever your cursor is — email, docs, Slack, forms, notes, or anywhere else you type.',
-    sub: 'No paste step. No separate window. No waiting on a cloud round trip in Local Mode.',
   },
   {
     title: 'Private by default, precise when needed',
     body: 'Local Mode runs on your Mac and stays there. Precision Mode is optional for the moments where you want cleaner results: names, accents, noise, jargon, and longer thoughts.',
-    sub: 'You decide when to use it. Nothing switches silently.',
   },
   {
     title: 'A better model than subscriptions',
-    body: 'WhisperFree is free for local dictation. Precision Mode uses credits, not a monthly plan.',
-    sub: 'Buy credits when you need them. If you don’t use Precision Mode, you don’t pay for it.',
+    body: 'WhisperFree is free for local dictation, and Precision Mode uses credits instead of a monthly plan. Buy credits when you need them — if you don’t use Precision Mode, you don’t pay for it.',
     proof: `At current pricing, $5 buys about ${anchors.hoursPerFiveDollars} hours of Precision Mode. For many people, that can last months.`,
   },
 ];
@@ -39,7 +36,7 @@ const props = [
           <div>
             <h3 class="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
             <p class="text-gray-600 leading-relaxed">{p.body}</p>
-            <p class="text-gray-600 leading-relaxed mt-2">{p.sub}</p>
+            {p.sub && <p class="text-gray-600 leading-relaxed mt-2">{p.sub}</p>}
             {p.proof && (
               <p class="mt-4 text-sm font-medium text-teal-800 bg-teal-50 rounded-xl px-4 py-3 inline-block">
                 {p.proof}
