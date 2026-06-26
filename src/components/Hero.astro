@@ -11,41 +11,61 @@ try {
   const match = appcast.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/);
   if (match) version = match[1];
 } catch {}
+
+// The product model, told as three short cards under the hero (homepage brief §1). Kept terse so
+// the hero subtitle stays a single clean sentence and the modes do the explaining.
+const modes = [
+  {
+    title: 'Local Mode',
+    body: 'Near-instant, private, and free — powered by NVIDIA Parakeet.',
+  },
+  {
+    title: 'Precision Mode',
+    body: 'Cleaner results for names, accents, noise, jargon, and longer thoughts.',
+  },
+  {
+    title: 'No subscriptions',
+    body: 'Buy Precision Mode credits when you need them.',
+  },
+];
 ---
 
-<section class="pt-32 pb-20 px-6">
+<section class="pt-32 pb-16 px-6">
   <div class="max-w-3xl mx-auto text-center">
     <div class="flex justify-center mb-8">
       <WaveformIcon size={64} animated={true} class="text-teal-600" />
     </div>
 
     <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-      Fast Mac dictation,<br />
-      with <span class="text-teal-600">control over the cloud.</span>
+      The fastest <span class="text-teal-600">private dictation</span> app for Mac
     </h1>
 
     <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-      WhisperFree runs locally on your Mac for free. When noise, names, accents, or jargon trip up
-      the local model, switch on a more accurate cloud model for pennies &mdash; billed by the
-      second, with no subscription and no account.
-    </p>
-
-    <p class="text-sm font-medium text-gray-500 mb-10">
-      Local by default &middot; Cloud by choice &middot; Paid only when used
+      WhisperFree turns your voice into polished writing anywhere on your Mac &mdash; instantly,
+      locally, and without opening another window.
     </p>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <DownloadButton size="lg" />
       <a
-        href="/pricing"
+        href="#why"
         class="text-base font-semibold text-teal-700 hover:text-teal-800 no-underline inline-flex items-center gap-1"
       >
-        See cloud pricing
+        See how it works
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
     </div>
     <p class="text-sm text-gray-400 mt-5">{version && <Fragment>v{version} &middot; </Fragment>}macOS 14+ &middot; Apple Silicon required</p>
+  </div>
+
+  <div class="max-w-4xl mx-auto mt-16 grid sm:grid-cols-3 gap-6">
+    {modes.map((m) => (
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-left">
+        <h2 class="text-base font-semibold text-gray-900 mb-1.5">{m.title}</h2>
+        <p class="text-sm text-gray-600 leading-relaxed">{m.body}</p>
+      </div>
+    ))}
   </div>
 </section>

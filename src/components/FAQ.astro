@@ -1,52 +1,30 @@
 ---
+// Short homepage FAQ — resolve friction without another long marketing section (brief §3).
+// Longer privacy/provider/language/open-source/competitor detail lives on dedicated pages.
 const faqs = [
   {
-    q: "Is it really free?",
-    a: "The app is free to download and dictate locally on your Mac — no trial, no account. There's also an optional cloud model you can switch on for tougher audio, billed by the second with no subscription. You only ever pay if you choose to use it."
+    q: "Is WhisperFree really free?",
+    a: "Yes. Local Mode is free to download and use on your Mac. Precision Mode is optional and uses credits only when you choose to use it."
   },
   {
     q: "How fast is it?",
-    a: "In local mode, by the time you've let go of the key your words are at the cursor. No upload, no spinner."
+    a: "In Local Mode, your words appear at the cursor as soon as you release the hotkey. There’s no upload step and no cloud round trip."
   },
   {
-    q: "How accurate is it?",
-    a: "Local is noticeably better than built-in Mac dictation, and you can add your own vocabulary and shortcuts. For noisy rooms, accents, and heavy jargon, the optional cloud model is a clear step up."
+    q: "What is Precision Mode?",
+    a: "Precision Mode is the optional mode for cleaner results when local dictation is more likely to make mistakes — names, accents, noise, jargon, and longer thoughts."
   },
   {
-    q: "Does it work offline?",
-    a: "Local mode does. After a one-time model download on first launch, no internet is needed. The optional cloud model needs a connection, since it sends audio to the provider."
+    q: "What leaves my Mac?",
+    a: "In Local Mode, nothing leaves your Mac. In Precision Mode, only the audio you choose to send is processed by the cloud provider. Precision Mode is explicit and never turns on silently."
   },
   {
-    q: "What leaves my Mac, and when?",
-    a: "In local mode — the default — nothing leaves your Mac; transcription runs entirely on-device. In cloud mode, which you turn on yourself, the audio you choose to send goes to the model provider (OpenAI at launch) and nothing else. The switch is explicit, shows a distinct menu-bar state, and never happens silently."
+    q: "Why not just use built-in Mac dictation?",
+    a: "WhisperFree is faster, more accurate, and teachable. You can add your own vocabulary and shortcuts so it handles the names, jargon, and phrases you actually use."
   },
   {
-    q: "Can WhisperFree employees hear my audio?",
-    a: "No. In cloud mode your audio goes straight to the model provider for transcription. On our side we only ever see metering data — duration, timestamps, and your credit balance — never your audio or the text."
-  },
-  {
-    q: "What does OpenAI do with my audio?",
-    a: "OpenAI's current docs list audio transcription requests as not used for training and not retained for abuse monitoring or application state. We don't control that policy, so if it changes we'll update our pages. Either way, local mode avoids sending audio off your Mac at all."
-  },
-  {
-    q: "Why trust this from an app built on “stays on your Mac”?",
-    a: "Because cloud is off by default and only runs when you switch it on, with a visible menu-bar state. Local mode is unchanged: free, private, and on by default. Cloud is an option for the cases where local struggles — not a change to how the app behaves unless you ask for it."
-  },
-  {
-    q: "What languages are supported?",
-    a: "English only for now. More languages later."
-  },
-  {
-    q: "Is it open source?",
-    a: "Not currently. The app is free to download and built on open-source voice models."
-  },
-  {
-    q: "How is this different from built-in Mac dictation?",
-    a: "It's faster, more accurate, and you can teach it. Add your vocabulary and write your own auto-corrections so it gets your names, jargon, and quirks right. Built-in dictation does none of that."
-  },
-  {
-    q: "How does this compare to Wispr Flow, Superwhisper, or Aqua Voice?",
-    a: "Wispr Flow and Aqua Voice are cloud-first products with capped free tiers and subscription upgrades — polished, but transcription happens in the cloud and the full product is a monthly plan. Superwhisper is closer on local and offline use, but its advanced workflow is subscription or lifetime-license oriented. WhisperFree's difference is a free local default plus optional, metered cloud credits — no account, no subscription. There's a fuller side-by-side on our compare page."
+    q: "How is this different from Wispr Flow, Superwhisper, or Aqua?",
+    a: "WhisperFree is local-first and free by default. Precision Mode is optional and credit-based, so you’re not forced into a monthly subscription to get better results."
   },
 ];
 ---
