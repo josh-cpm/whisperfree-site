@@ -9,14 +9,14 @@ const { anchors } = await getPricingView();
 
 const title = 'WhisperFree vs Wispr Flow, Superwhisper & Aqua Voice';
 const description =
-  'A fair, factual comparison of Mac dictation apps. WhisperFree is local-first and free by default, with optional metered cloud — no account, no subscription.';
+  'A fair, factual comparison of Mac dictation apps. WhisperFree is local-first and free by default, with optional Precision Mode credits — no account, no subscription.';
 
 // Kept deliberately fair (PR feedback §6 / review §5): the wedge is "local default + honest cloud
 // option," not "we're free and they're paid." Each row states what each product actually leads with.
 const rows = [
   {
     feature: 'Default mode',
-    whisperfree: 'Local, on-device',
+    whisperfree: 'Local Mode, on-device',
     others: 'Cloud-first (Superwhisper offers local)',
   },
   {
@@ -26,7 +26,7 @@ const rows = [
   },
   {
     feature: 'Paid model',
-    whisperfree: 'Metered cloud credits, by the second',
+    whisperfree: 'Precision Mode credits, by the second',
     others: 'Monthly / annual subscriptions or lifetime license',
   },
   {
@@ -36,7 +36,7 @@ const rows = [
   },
   {
     feature: 'What leaves your Mac',
-    whisperfree: 'Nothing in local mode; only clips you send in cloud mode',
+    whisperfree: 'Nothing in Local Mode; only clips you send in Precision Mode',
     others: 'Cloud-first apps transcribe in the cloud',
   },
 ];
@@ -44,7 +44,7 @@ const rows = [
 const picks = [
   {
     title: 'Choose WhisperFree',
-    body: 'You want local-first Mac dictation, no account, no subscription, and an optional metered cloud model for the clips where accuracy matters.',
+    body: 'You want local-first Mac dictation, no account, no subscription, and an optional Precision Mode for the clips where you want cleaner results.',
     highlight: true,
   },
   {
@@ -100,8 +100,8 @@ const picks = [
         </div>
         <p class="text-sm text-gray-500 mt-4">
           Competitor details reflect each product’s public pricing and privacy pages and can change;
-          check theirs for the latest. WhisperFree cloud is metered at the provider’s cost plus a
-          flat 10&cent;/audio hour &mdash; $5 lasts roughly {anchors.hoursPerFiveDollars} hours.
+          check theirs for the latest. WhisperFree’s Precision Mode is metered at the provider’s cost
+          plus a flat 10&cent;/audio hour &mdash; $5 lasts roughly {anchors.hoursPerFiveDollars} hours.
         </p>
       </div>
     </section>
@@ -122,10 +122,10 @@ const picks = [
 
     <section class="py-20 px-6">
       <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Try the local default for free</h2>
+        <h2 class="text-3xl font-bold mb-4">Try Local Mode for free</h2>
         <p class="text-lg text-gray-600 mb-8">
-          Download WhisperFree, dictate locally for free, and reach for the cloud only when you
-          choose to. No account, no subscription.
+          Download WhisperFree, dictate in Local Mode for free, and turn on Precision Mode only when
+          you want it. No account, no subscription.
         </p>
         <div class="flex justify-center">
           <DownloadButton size="lg" />

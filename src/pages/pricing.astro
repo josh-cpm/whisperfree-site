@@ -6,9 +6,9 @@ import { getPricingView, centsToDollars } from '../lib/pricing.ts';
 
 const { manifest, anchors, margin } = await getPricingView();
 
-const title = 'Pricing — WhisperFree cloud models';
+const title = 'Pricing — WhisperFree Precision Mode';
 const description =
-  'Cloud models in WhisperFree are billed by the second at the provider’s cost plus 10¢ per audio hour. No subscription, no account. Local dictation stays free.';
+  'Precision Mode is billed by the second at the provider’s cost plus 10¢ per audio hour. No subscription, no account. Local dictation stays free.';
 
 // Spend anchors, rendered as cards (PMM §4b) — derived from the manifest, never hardcoded.
 const costCards = [
@@ -28,12 +28,12 @@ const costCards = [
 
 // Prescriptive "stay local vs switch" guidance (PMM §7).
 const switchRows = [
-  { context: 'Quiet room, clear speech', action: 'Stay local. It’s free and excellent.' },
+  { context: 'Quiet room, clear speech', action: 'Stay in Local Mode. It’s free and excellent.' },
   {
     context: 'Accents, names, jargon, and noisy rooms',
-    action: `Switch to the cloud model — a clear accuracy jump where local struggles, about ~${anchors.perFifteenMinCents}¢ for 15 minutes of audio.`,
+    action: `Turn on Precision Mode — a clear step up where Local Mode struggles, about ~${anchors.perFifteenMinCents}¢ for 15 minutes of audio.`,
   },
-  { context: 'Unsure', action: 'Stay local; switch the moment you hit a bad transcription.' },
+  { context: 'Unsure', action: 'Stay in Local Mode; turn on Precision Mode the moment you hit a bad result.' },
 ];
 
 // Illustrative noisy-clip demo (café audio with names + jargon). Swap in a real captured clip later.
@@ -50,12 +50,12 @@ const demoCloud =
     <section class="pt-32 pb-16 px-6">
       <div class="max-w-3xl mx-auto text-center">
         <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
-          Local dictation is <span class="text-teal-600">free.</span><br />Cloud is optional.
+          Local Mode is <span class="text-teal-600">free.</span><br />Precision Mode is pennies.
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          Dictation on your Mac costs nothing. When you need more accuracy &mdash; accents, names,
-          jargon, and noisy rooms &mdash; switch on a cloud model, billed by the second at the
-          provider&rsquo;s cost plus a flat 10&cent;. No subscription. No account.
+          Dictating on your Mac costs nothing. When you want cleaner results &mdash; names, accents,
+          noise, jargon, and longer thoughts &mdash; turn on Precision Mode, billed by the second at
+          the provider&rsquo;s cost plus a flat 10&cent;. No subscription. No account.
         </p>
       </div>
     </section>
@@ -111,7 +111,7 @@ const demoCloud =
             <h2 class="text-3xl font-bold text-center mb-4">What that actually costs</h2>
             <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
               An hour of dictated audio is a lot of dictation &mdash; most people dictate minutes a
-              day. So &ldquo;cloud AI&rdquo; here means cents, not a monthly bill.
+              day. So Precision Mode here means cents, not a monthly bill.
             </p>
             <div class="grid sm:grid-cols-3 gap-6">
               {costCards.map((card) => (
@@ -129,25 +129,25 @@ const demoCloud =
           </div>
         </section>
 
-        <!-- Cloud explainer + noisy-clip demo -->
+        <!-- Precision Mode explainer + noisy-clip demo -->
         <section class="py-20 px-6">
           <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-4">Where a cloud model helps</h2>
+            <h2 class="text-3xl font-bold text-center mb-4">Where Precision Mode helps</h2>
             <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              The local model is excellent in a quiet room. A more accurate cloud model pulls ahead
-              exactly where dictation breaks down &mdash; accents, names, jargon, and noisy rooms.
-              Same noisy clip, both models:
+              Local Mode is excellent in a quiet room. Precision Mode pulls ahead exactly where
+              dictation breaks down &mdash; names, accents, jargon, and noisy rooms. Same clip, both
+              modes:
             </p>
             <div class="grid sm:grid-cols-2 gap-6">
               <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                 <div class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
-                  Local model
+                  Local Mode
                 </div>
                 <p class="text-gray-700 leading-relaxed">{demoLocal}</p>
               </div>
               <div class="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                 <div class="text-xs font-semibold uppercase tracking-wide text-teal-600 mb-3">
-                  Cloud model
+                  Precision Mode
                 </div>
                 <p class="text-gray-900 leading-relaxed">{demoCloud}</p>
               </div>
@@ -178,17 +178,17 @@ const demoCloud =
           <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-4">What leaves your Mac</h2>
             <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Cloud mode is the one time audio leaves your Mac. Here&rsquo;s exactly what happens.
+              Precision Mode is the one time audio leaves your Mac. Here&rsquo;s exactly what happens.
             </p>
             <div class="space-y-5">
               <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                <h3 class="font-semibold text-gray-900 mb-2">Local mode (default)</h3>
+                <h3 class="font-semibold text-gray-900 mb-2">Local Mode (default)</h3>
                 <p class="text-gray-600">
                   Nothing leaves your Mac. Unchanged, free, and on by default.
                 </p>
               </div>
               <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                <h3 class="font-semibold text-gray-900 mb-2">Cloud mode (you switch it on)</h3>
+                <h3 class="font-semibold text-gray-900 mb-2">Precision Mode (you turn it on)</h3>
                 <p class="text-gray-600">
                   The audio you choose to send &mdash; and nothing else &mdash; goes to the model
                   provider (OpenAI at launch) for transcription. We see only metering data:
@@ -219,8 +219,8 @@ const demoCloud =
           <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">Free to start, on your Mac</h2>
             <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download WhisperFree and dictate locally for free. Cloud models are there when you
-              need them &mdash; no subscription, no account, off until you flip the switch.
+              Download WhisperFree and dictate in Local Mode for free. Precision Mode is there when
+              you want cleaner results &mdash; no subscription, no account, off until you turn it on.
             </p>
             <p class="text-gray-500">
               Curious why we price this way? Read
@@ -234,10 +234,10 @@ const demoCloud =
     ) : (
       <section class="py-32 px-6">
         <div class="max-w-2xl mx-auto text-center">
-          <h2 class="text-3xl font-bold mb-4">Cloud models are paused right now</h2>
+          <h2 class="text-3xl font-bold mb-4">Precision Mode is paused right now</h2>
           <p class="text-lg text-gray-600">
-            Cloud transcription is temporarily unavailable. Local dictation still runs on your Mac,
-            free, as always. Check back soon.
+            Precision Mode is temporarily unavailable. Local Mode still runs on your Mac, free, as
+            always. Check back soon.
           </p>
         </div>
       </section>
