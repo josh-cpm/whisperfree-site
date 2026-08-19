@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { getPricingView, centsToDollars } from '../lib/pricing.ts';
+
+const { manifest, anchors, margin } = await getPricingView();
+
+const title = 'Pricing — WhisperFree Precision Mode';
+const description =
+  'Precision Mode is billed by the second at the provider’s cost plus 10¢ per audio hour. No subscription, no account. Local dictation stays free.';
+
+// Spend anchors, rendered as cards (PMM §4b) — derived from the manifest, never hardcoded.
+const costCards = [
+  {
+    value: `~${anchors.perFifteenMinCents}¢`,
+    label: 'A heavy day of dictation — about 15 minutes of audio.',
+  },
+  {
+    value: `~${anchors.hoursPerFiveDollars} hrs`,
+    label: `What $5 of credit buys — about ${anchors.monthsPerFiveDollarsAtOneHourPerWeek} months at an hour of dictation a week.`,
+  },
+  {
+    value: `< $${anchors.subscriptionMonthly}/yr`,
+    label: `What most dictation users would spend — versus the $${anchors.subscriptionAnnualLow}–${anchors.subscriptionAnnual} a year of a typical $${anchors.subscriptionMonthlyLow}–${anchors.subscriptionMonthly}/month dictation subscription.`,
+  },
+];
+
+// Prescriptive "stay local vs switch" guidance (PMM §7).
+const switchRows = [
+  { context: 'Quiet room, clear speech', action: 'Stay in Local Mode. It’s free and excellent.' },
+  {
+    context: 'Accents, names, jargon, and noisy rooms',
+    action: `Turn on Precision Mode — a clear step up where Local Mode struggles, about ~${anchors.perFifteenMinCents}¢ for 15 minutes of audio.`,
+  },
+  { context: 'Unsure', action: 'Stay in Local Mode; turn on Precision Mode the moment you hit a bad result.' },
+];
+
+// Illustrative noisy-clip demo (café audio with names + jargon). Swap in a real captured clip later.
+const demoLocal =
+  'meet me at the cafe on the corner to talk about the postgres migration and the redis cash layer';
+const demoCloud =
+  'Meet me at the café on the corner to talk about the Postgres migration and the Redis cache layer.';
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+  <main>
+    <!-- Header -->
+    <section class="pt-32 pb-16 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+          Local Mode is <span class="text-teal-600">free.</span><br />Precision Mode is pennies.
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Dictating on your Mac costs nothing. When you want cleaner results &mdash; names, accents,
+          noise, jargon, and longer thoughts &mdash; turn on Precision Mode, billed by the second at
+          the provider&rsquo;s cost plus a flat 10&cent;. No subscription. No account.
+        </p>
+      </div>
+    </section>
+
+    {manifest.enabled ? (
+      <>
+        <!-- Cost breakdown table -->
+        <section class="pb-20 px-6">
+          <div class="max-w-3xl mx-auto">
+            <div class="overflow-hidden rounded-2xl border border-gray-200">
+              <table class="w-full text-left border-collapse">
+                <thead class="bg-gray-50 text-sm text-gray-500">
+                  <tr>
+                    <th class="px-5 py-4 font-medium">Model</th>
+                    <th class="px-5 py-4 font-medium">Provider&rsquo;s price</th>
+                    <th class="px-5 py-4 font-medium">Our price</th>
+                    <th class="px-5 py-4 font-medium">What we add</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {manifest.models.map((m) => (
+                    <tr class="border-t border-gray-100">
+                      <td class="px-5 py-5 font-semibold text-gray-900">{m.label}</td>
+                      <td class="px-5 py-5 text-gray-600">
+                        {centsToDollars(m.estimatedProviderCentsPerAudioHour)}
+                        <span class="text-gray-400"> / audio hr</span>
+                      </td>
+                      <td class="px-5 py-5">
+                        <span class="font-bold text-teal-700">
+                          {centsToDollars(m.estimatedTotalCentsPerAudioHour)}
+                        </span>
+                        <span class="text-gray-400"> / audio hr</span>
+                      </td>
+                      <td class="px-5 py-5 text-gray-600">
+                        {centsToDollars(m.marginCentsPerAudioHour)} / hr
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p class="text-sm text-gray-500 mt-4 text-center">
+              We charge what the provider charges us, plus {margin} an hour for the infrastructure
+              that meters it. That&rsquo;s the whole business model &mdash; no markup games, no
+              &ldquo;contact sales.&rdquo; Providers&rsquo; billing quirks pass through too.
+            </p>
+          </div>
+        </section>
+
+        <!-- Anchor math -->
+        <section class="py-20 px-6 bg-gray-50">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">What that actually costs</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              An hour of dictated audio is a lot of dictation &mdash; most people dictate minutes a
+              day. So Precision Mode here means cents, not a monthly bill.
+            </p>
+            <div class="grid sm:grid-cols-3 gap-6">
+              {costCards.map((card) => (
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 text-center">
+                  <div class="text-3xl font-bold text-teal-700 mb-2">{card.value}</div>
+                  <p class="text-gray-600 text-sm">{card.label}</p>
+                </div>
+              ))}
+            </div>
+            <p class="text-center text-gray-600 mt-10 max-w-2xl mx-auto">
+              Most people dictate far less than they think. Per-second metering means you pay for
+              the minutes you actually send &mdash; and auto-recharge makes the balance invisible
+              after one decision, if you&rsquo;d rather not think about it.
+            </p>
+          </div>
+        </section>
+
+        <!-- Precision Mode explainer + noisy-clip demo -->
+        <section class="py-20 px-6">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Where Precision Mode helps</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Local Mode is excellent in a quiet room. Precision Mode pulls ahead exactly where
+              dictation breaks down &mdash; names, accents, jargon, and noisy rooms. Same clip, both
+              modes:
+            </p>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <div class="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
+                  Local Mode
+                </div>
+                <p class="text-gray-700 leading-relaxed">{demoLocal}</p>
+              </div>
+              <div class="bg-teal-50 rounded-2xl p-6 border border-teal-100">
+                <div class="text-xs font-semibold uppercase tracking-wide text-teal-600 mb-3">
+                  Precision Mode
+                </div>
+                <p class="text-gray-900 leading-relaxed">{demoCloud}</p>
+              </div>
+            </div>
+            <p class="text-sm text-gray-400 mt-4 text-center">
+              Illustrative example of a noisy clip with names and jargon.
+            </p>
+          </div>
+        </section>
+
+        <!-- When to switch -->
+        <section class="py-20 px-6 bg-gray-50">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">When should you switch?</h2>
+            <div class="space-y-4">
+              {switchRows.map((row) => (
+                <div class="bg-white rounded-xl border border-gray-200 p-6 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
+                  <div class="sm:w-1/2 font-semibold text-gray-900">{row.context}</div>
+                  <div class="sm:w-1/2 text-gray-600">{row.action}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- Privacy -->
+        <section class="py-20 px-6">
+          <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">What leaves your Mac</h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+              Precision Mode is the one time audio leaves your Mac. Here&rsquo;s exactly what happens.
+            </p>
+            <div class="space-y-5">
+              <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <h3 class="font-semibold text-gray-900 mb-2">Local Mode (default)</h3>
+                <p class="text-gray-600">
+                  Nothing leaves your Mac. Unchanged, free, and on by default.
+                </p>
+              </div>
+              <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <h3 class="font-semibold text-gray-900 mb-2">Precision Mode (you turn it on)</h3>
+                <p class="text-gray-600">
+                  The audio you choose to send &mdash; and nothing else &mdash; goes to the model
+                  provider (OpenAI at launch) for transcription. We see only metering data:
+                  duration, timestamps, and your balance. The switch is explicit and visible, with a
+                  distinct menu-bar state, and never happens silently.
+                </p>
+              </div>
+              <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <h3 class="font-semibold text-gray-900 mb-2">What OpenAI does with it</h3>
+                <p class="text-gray-700">
+                  OpenAI&rsquo;s current docs list audio transcription requests as not used for
+                  training and not retained for abuse monitoring or application state. We don&rsquo;t
+                  control that policy, so if it changes we&rsquo;ll update this page. See
+                  {' '}
+                  <a
+                    href="https://developers.openai.com/api/docs/guides/your-data"
+                    class="text-teal-700 underline"
+                    rel="noopener"
+                  >OpenAI&rsquo;s data controls</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="py-20 px-6 bg-gray-50">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Free to start, on your Mac</h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Download WhisperFree and dictate in Local Mode for free. Precision Mode is there when
+              you want cleaner results &mdash; no subscription, no account, off until you turn it on.
+            </p>
+            <p class="text-gray-500">
+              Curious why we price this way? Read
+              {' '}
+              <a href="/blog/why-we-price-at-cost" class="text-teal-700 underline">
+                Why we price at cost + 10&cent;/hour</a>.
+            </p>
+          </div>
+        </section>
+      </>
+    ) : (
+      <section class="py-32 px-6">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">Precision Mode is paused right now</h2>
+          <p class="text-lg text-gray-600">
+            Precision Mode is temporarily unavailable. Local Mode still runs on your Mac, free, as
+            always. Check back soon.
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+  <Footer />
+</Layout>

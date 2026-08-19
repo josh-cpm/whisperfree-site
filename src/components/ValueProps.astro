@@ -1,0 +1,50 @@
+---
+import { getPricingView } from '../lib/pricing.ts';
+
+// Pricing supports the positioning rather than leading it (homebrew brief: "$5 can last months"
+// appears here as a proof line, not in the hero). hoursPerFiveDollars is derived from the manifest
+// so the number always matches the pricing page.
+const { anchors } = await getPricingView();
+
+const props = [
+  {
+    title: 'Dictation that keeps up',
+    body: 'Hold a hotkey, speak naturally, and release. Your words land wherever your cursor is — email, docs, Slack, forms, notes, or anywhere else you type.',
+  },
+  {
+    title: 'Private by default, precise when needed',
+    body: 'Local Mode runs on your Mac and stays there. Precision Mode is optional for the moments where you want cleaner results: names, accents, noise, jargon, and longer thoughts.',
+  },
+  {
+    title: 'A better model than subscriptions',
+    body: 'WhisperFree is free for local dictation, and Precision Mode uses credits instead of a monthly plan. Buy credits when you need them — if you don’t use Precision Mode, you don’t pay for it.',
+    proof: `At current pricing, $5 buys about ${anchors.hoursPerFiveDollars} hours of Precision Mode. For many people, that can last months.`,
+  },
+];
+---
+
+<section id="why" class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-14">Why WhisperFree feels different</h2>
+
+    <div class="space-y-12">
+      {props.map((p, i) => (
+        <div class="grid sm:grid-cols-[auto,1fr] gap-5 sm:gap-8 items-start">
+          <div class="w-11 h-11 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-lg font-bold shrink-0">
+            {i + 1}
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{p.body}</p>
+            {p.sub && <p class="text-gray-600 leading-relaxed mt-2">{p.sub}</p>}
+            {p.proof && (
+              <p class="mt-4 text-sm font-medium text-teal-800 bg-teal-50 rounded-xl px-4 py-3 inline-block">
+                {p.proof}
+              </p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "updated": "2026-06-22",
+  "enabled": true,
+  "models": [
+    {
+      "id": "openai-mini",
+      "label": "OpenAI Mini",
+      "providerInputCentsPerMillionTokens": 125,
+      "providerOutputCentsPerMillionTokens": 500,
+      "marginCentsPerAudioHour": 10,
+      "estimatedProviderCentsPerAudioHour": 18,
+      "estimatedTotalCentsPerAudioHour": 28
+    }
+  ]
+}
