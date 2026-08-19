@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getPricingView } from '../../lib/pricing.ts';
+
+const { model, anchors, providerPrice, ourPrice, margin } = await getPricingView();
+
+const title = 'Why we price at cost + 10¢/hour — WhisperFree';
+const description =
+  'WhisperFree’s cloud models are billed at the provider’s cost plus a flat 10¢ per audio hour — and we publish the math. Here’s why.';
+---
+
+<Layout title={title} description={description}>
+  <Nav />
+  <main class="pt-32 pb-20 px-6">
+    <article class="max-w-2xl mx-auto">
+      <p class="text-sm text-teal-700 font-semibold mb-3">Pricing</p>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+        Why we price at cost + 10&cent;/hour
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed mb-10">
+        WhisperFree just added optional cloud models. We bill them at the provider&rsquo;s cost plus
+        a flat 10&cent; per audio hour &mdash; and we publish the whole calculation. Here&rsquo;s
+        the thinking.
+      </p>
+
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">Local is still free. This is for the hard cases.</h2>
+        <p>
+          The local model runs entirely on your Mac, costs nothing, and is genuinely excellent in a
+          quiet room. For most dictation, it&rsquo;s all you need &mdash; and it stays free.
+        </p>
+        <p>
+          But a small on-device model struggles in exactly the places dictation gets hard:
+          background noise, strong accents, dense jargon and names, and long rambling passages where
+          errors compound. A frontier cloud model handles those much better. So we added one &mdash;
+          optional, off by default, and yours to switch on only when you need it.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">The whole business model, in one line</h2>
+        <p>
+          We charge what the provider charges us, plus {margin} an hour for the infrastructure that
+          meters it. That&rsquo;s it. No subscription, no markup games, no &ldquo;contact
+          sales.&rdquo;
+        </p>
+        <p>
+          At launch the one model is {model.label}: the provider&rsquo;s price is about
+          {providerPrice} per audio hour, we add {margin}, and you pay <strong>{ourPrice} per audio
+          hour</strong>. The same pricing manifest the app bills from is what renders our
+          <a href="/pricing" class="text-teal-700 underline">pricing page</a> &mdash; so the
+          published numbers can never drift from what we actually charge.
+        </p>
+        <p>
+          Transparency cuts both ways: providers have billing quirks, and those pass through to you
+          rather than getting hidden in a round number. We&rsquo;d rather show the seams than pretend
+          there aren&rsquo;t any.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">Why per-second, not per-month</h2>
+        <p>
+          Most people dictate far less than they assume &mdash; minutes a day, not hours. An audio
+          hour is a <em>lot</em> of talking, and it costs cents. A heavy day of dictation is around
+          15 minutes of audio: about <strong>~{anchors.perFifteenMinCents}&cent;</strong>.
+          <strong>$5</strong> of credit lasts roughly
+          <strong>{anchors.hoursPerFiveDollars} hours</strong> &mdash; about
+          {anchors.monthsPerFiveDollarsAtOneHourPerWeek} months if you dictate an hour a week.
+        </p>
+        <p>
+          Compare that to a ${anchors.subscriptionMonthly}/month subscription: that&rsquo;s
+          ${anchors.subscriptionAnnual} a year whether you use it or not. The median dictation user
+          would spend <strong>well under ${anchors.subscriptionMonthly} a year</strong> with us. If
+          you&rsquo;d rather not think about a balance at all, auto-recharge makes it invisible after
+          one decision.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">The privacy tradeoff, stated plainly</h2>
+        <p>
+          Cloud mode is the one time your audio leaves your Mac, and only the clips you choose to
+          send. They go to the model provider (OpenAI at launch), which retains API audio for up to
+          30 days for abuse monitoring before deleting it. We can&rsquo;t promise zero retention at
+          launch, so we&rsquo;re telling you rather than burying it. Local mode avoids all of this.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">Why bother being this open?</h2>
+        <p>
+          Because the brand was built on trust, and transparent pricing is the honest version of
+          that for a paid feature. You can always bring your own API key if you&rsquo;d rather. The
+          10&cent; buys zero setup, accurate metering, and one-click switching &mdash; and the
+          confidence that we&rsquo;re not quietly marking anything up.
+        </p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-100">
+        <a href="/pricing" class="text-teal-700 underline font-medium">See the full pricing breakdown &rarr;</a>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>

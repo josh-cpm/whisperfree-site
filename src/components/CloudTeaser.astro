@@ -1,0 +1,46 @@
+---
+import { getPricingView } from '../lib/pricing.ts';
+import CtaButton from './CtaButton.astro';
+
+const { manifest, anchors, ourPrice } = await getPricingView();
+---
+
+{manifest.enabled && (
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-block text-xs font-semibold uppercase tracking-wide text-teal-700 bg-teal-100 rounded-full px-3 py-1 mb-5">
+        New
+      </div>
+      <h2 class="text-3xl font-bold mb-4">When local isn't enough, switch to a cloud model</h2>
+      <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Noisy café, heavy accent, a wall of jargon? Turn on a frontier cloud model for a clear
+        accuracy jump &mdash; billed by the second at {ourPrice} an hour. That&rsquo;s the
+        provider&rsquo;s cost plus a flat 10&cent;. No subscription, no account.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6 mb-10 text-left">
+        <div class="bg-white rounded-2xl p-6 border border-gray-100">
+          <h3 class="font-semibold text-gray-900 mb-2">Better where local fails</h3>
+          <p class="text-gray-600 text-sm">
+            Background noise, accents, names, and long rambling dictation &mdash; the exact cases
+            where small on-device models drift.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-gray-100">
+          <h3 class="font-semibold text-gray-900 mb-2">Pay what it costs</h3>
+          <p class="text-gray-600 text-sm">
+            $5 of credit lasts about {anchors.hoursPerFiveDollars} hours of audio. Most people
+            spend well under ${anchors.subscriptionMonthly} a year.
+          </p>
+        </div>
+      </div>
+
+      <CtaButton href="/pricing">
+        See pricing
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </CtaButton>
+    </div>
+  </section>
+)}

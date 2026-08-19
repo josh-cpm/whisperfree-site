@@ -2,19 +2,35 @@
 const faqs = [
   {
     q: "Is it really free?",
-    a: "Yes. No trial, no account. The core app will always be free; optional upgrades may come later."
+    a: "The app is free to download and dictate locally on your Mac — no trial, no account. There's also an optional cloud model you can switch on for tougher audio, billed by the second with no subscription. You only ever pay if you choose to use it."
   },
   {
     q: "How fast is it?",
-    a: "By the time you've let go of the key, your words are at the cursor. No upload, no spinner."
+    a: "In local mode, by the time you've let go of the key your words are at the cursor. No upload, no spinner."
   },
   {
     q: "How accurate is it?",
-    a: "Noticeably better than built-in Mac dictation. Add your own vocabulary and shortcuts to push it further."
+    a: "Local is noticeably better than built-in Mac dictation, and you can add your own vocabulary and shortcuts. For noisy rooms, accents, and heavy jargon, the optional cloud model is a clear step up."
   },
   {
     q: "Does it work offline?",
-    a: "Yes. After a one-time model download on first launch, no internet is needed."
+    a: "Local mode does. After a one-time model download on first launch, no internet is needed. The optional cloud model needs a connection, since it sends audio to the provider."
+  },
+  {
+    q: "What leaves my Mac, and when?",
+    a: "In local mode — the default — nothing leaves your Mac; transcription runs entirely on-device. In cloud mode, which you turn on yourself, the audio you choose to send goes to the model provider (OpenAI at launch) and nothing else. The switch is explicit, shows a distinct menu-bar state, and never happens silently."
+  },
+  {
+    q: "Can WhisperFree employees hear my audio?",
+    a: "No. In cloud mode your audio goes straight to the model provider for transcription. On our side we only ever see metering data — duration, timestamps, and your credit balance — never your audio or the text."
+  },
+  {
+    q: "What does OpenAI do with my audio?",
+    a: "OpenAI retains API audio for up to 30 days for abuse monitoring, then deletes it, and doesn't train on it. We can't offer a zero-retention guarantee at launch, so we're saying so plainly rather than burying it. Local mode avoids this entirely."
+  },
+  {
+    q: "Why trust this from an app built on “stays on your Mac”?",
+    a: "Because cloud is off by default and only runs when you switch it on, with a visible menu-bar state. Local mode is unchanged: free, private, and on by default. Cloud is an option for the cases where local struggles — not a change to how the app behaves unless you ask for it."
   },
   {
     q: "What languages are supported?",
@@ -22,7 +38,7 @@ const faqs = [
   },
   {
     q: "Is it open source?",
-    a: "Not currently. The app is free to use and built on open-source voice models."
+    a: "Not currently. The app is free to download and built on open-source voice models."
   },
   {
     q: "How is this different from built-in Mac dictation?",
@@ -30,7 +46,7 @@ const faqs = [
   },
   {
     q: "How does this compare to Wispr Flow, Superwhisper, or Aqua Voice?",
-    a: "Wispr Flow and Aqua Voice are paid cloud services — fast and polished, but your audio leaves your Mac and you pay every month. Superwhisper is on-device like us, but also paid. Of the three, WhisperFree is the only one that's both free and fully on your Mac."
+    a: "Wispr Flow and Aqua Voice are paid cloud subscriptions — fast and polished, but your audio always leaves your Mac and you pay every month. Superwhisper is on-device like us, but paid. WhisperFree runs locally for free, and adds an optional pay-by-the-second cloud model only when you want the extra accuracy — so you're never locked into a subscription."
   },
 ];
 ---
