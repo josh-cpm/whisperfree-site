@@ -1,0 +1,36 @@
+---
+const props = [
+  {
+    title: 'Dictation that keeps up',
+    body: 'Hold a hotkey, speak naturally, and release. Your words land wherever your cursor is — email, docs, Slack, forms, notes, or anywhere else you type.',
+  },
+  {
+    title: 'Private by default',
+    body: 'WhisperFree runs entirely on your Mac. Your voice is never uploaded, and there is no account or login.',
+  },
+  {
+    title: 'A better model than subscriptions',
+    body: 'No monthly fee, no trial that expires. Download once and dictate for free, for as long as you want.',
+  },
+];
+---
+
+<section id="why" class="py-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-14">Why WhisperFree feels different</h2>
+
+    <div class="space-y-12">
+      {props.map((p, i) => (
+        <div class="grid sm:grid-cols-[auto,1fr] gap-5 sm:gap-8 items-start">
+          <div class="w-11 h-11 bg-teal-100 text-teal-700 rounded-xl flex items-center justify-center text-lg font-bold shrink-0">
+            {i + 1}
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">{p.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{p.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

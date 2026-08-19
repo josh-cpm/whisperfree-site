@@ -11,26 +11,58 @@ try {
   const match = appcast.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/);
   if (match) version = match[1];
 } catch {}
+
+const highlights = [
+  {
+    title: 'Instant',
+    body: 'Release the key and your words are already there. No upload, no spinner.',
+  },
+  {
+    title: 'Fully private',
+    body: 'Transcription runs entirely on your Mac. Your voice never leaves it.',
+  },
+  {
+    title: 'No subscriptions',
+    body: 'WhisperFree is free to download and free to use.',
+  },
+];
 ---
 
-<section class="pt-32 pb-20 px-6">
+<section class="pt-32 pb-16 px-6">
   <div class="max-w-3xl mx-auto text-center">
     <div class="flex justify-center mb-8">
       <WaveformIcon size={64} animated={true} class="text-teal-600" />
     </div>
 
     <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-      Dictation that's <span class="text-teal-600">instant</span><br />
-      and <span class="text-teal-600">stays on your Mac</span>.
+      The fastest <span class="text-teal-600">private dictation</span> app for Mac
     </h1>
 
-    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-      A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice.
+    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+      WhisperFree turns your voice into text anywhere on your Mac: instant, private, and free.
     </p>
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <DownloadButton size="lg" />
-      <span class="text-sm text-gray-400">{version && <Fragment>v{version} &middot; </Fragment>}macOS 14+ &middot; Apple Silicon required</span>
+      <a
+        href="#why"
+        class="text-base font-semibold text-teal-700 hover:text-teal-800 no-underline inline-flex items-center gap-1"
+      >
+        See how it works
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </div>
+    <p class="text-sm text-gray-400 mt-5">{version && <Fragment>v{version} &middot; </Fragment>}macOS 14+ &middot; Apple Silicon required</p>
+  </div>
+
+  <div class="max-w-4xl mx-auto mt-16 grid sm:grid-cols-3 gap-6">
+    {highlights.map((h) => (
+      <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 text-left">
+        <h2 class="text-base font-semibold text-gray-900 mb-1.5">{h.title}</h2>
+        <p class="text-sm text-gray-600 leading-relaxed">{h.body}</p>
+      </div>
+    ))}
   </div>
 </section>
