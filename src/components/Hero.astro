@@ -4,6 +4,12 @@ import DownloadButton from './DownloadButton.astro';
 import fs from 'node:fs';
 import path from 'node:path';
 
+interface Props {
+  cloudEnabled?: boolean;
+}
+
+const { cloudEnabled = false } = Astro.props;
+
 // Parse version from appcast.xml at build time
 let version = '';
 try {
@@ -19,14 +25,31 @@ try {
       <WaveformIcon size={64} animated={true} class="text-teal-600" />
     </div>
 
-    <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-      Dictation that's <span class="text-teal-600">instant</span><br />
-      and <span class="text-teal-600">stays on your Mac</span>.
-    </h1>
+    {cloudEnabled ? (
+      <>
+        <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+          <span class="text-teal-600">Local</span> when it's enough.<br />
+          <span class="text-teal-600">Cloud</span> when it matters.
+        </h1>
 
-    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-      A free, private alternative to Wispr Flow, Superwhisper, and Aqua Voice.
-    </p>
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Fast, private dictation that runs on your Mac for free &mdash; with optional cloud models
+          for noisy rooms, accents, and jargon. Billed by the second, no subscription.
+        </p>
+      </>
+    ) : (
+      <>
+        <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 mb-6">
+          Dictation that's <span class="text-teal-600">instant</span><br />
+          and <span class="text-teal-600">stays on your Mac</span>.
+        </h1>
+
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Fast, private dictation for Mac. Speech audio and transcripts stay local, and the app is
+          free.
+        </p>
+      </>
+    )}
 
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
       <DownloadButton size="lg" />

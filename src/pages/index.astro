@@ -4,19 +4,28 @@ import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Features from '../components/Features.astro';
+import CloudTeaser from '../components/CloudTeaser.astro';
 import Requirements from '../components/Requirements.astro';
 import FAQ from '../components/FAQ.astro';
 import Footer from '../components/Footer.astro';
+import { getPricing } from '../lib/pricing.ts';
+
+const { enabled: cloudEnabled } = await getPricing();
+
+const description = cloudEnabled
+  ? 'Fast, private dictation for Mac. Local transcription runs on your Mac for free; optional cloud models handle noise, accents, and jargon. No subscription or WhisperFree login.'
+  : 'Fast, private dictation for Mac. Speech audio and transcripts stay on your Mac, and local transcription is free.';
 ---
 
-<Layout>
+<Layout description={description}>
   <Nav />
   <main>
-    <Hero />
+    <Hero cloudEnabled={cloudEnabled} />
     <HowItWorks />
-    <Features />
+    <Features cloudEnabled={cloudEnabled} />
+    <CloudTeaser />
     <Requirements />
-    <FAQ />
+    <FAQ cloudEnabled={cloudEnabled} />
   </main>
   <Footer />
 </Layout>
