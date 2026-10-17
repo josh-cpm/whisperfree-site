@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { getPricingView } from '../../lib/pricing.ts';
+
+const { manifest, model, anchors, providerPrice, ourPrice, margin } = await getPricingView();
+
+const title = 'Why we price at cost + 10¢/hour — WhisperFree';
+const description =
+  'WhisperFree’s cloud models are billed at the provider’s cost plus a flat 10¢ per audio hour — and we publish the math. Here’s why.';
+---
+
+<Layout title={title} description={description} noindex={!manifest.enabled}>
+  <Nav />
+  <main class="pt-32 pb-20 px-6">
+    <article class="max-w-2xl mx-auto">
+      <p class="text-sm text-teal-700 font-semibold mb-3">Pricing</p>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+        Why we price at cost + 10&cent;/hour
+      </h1>
+      <p class="text-xl text-gray-600 leading-relaxed mb-10">
+        {manifest.enabled
+          ? 'WhisperFree includes optional cloud models. We bill them at the provider’s cost plus a flat 10¢ per audio hour — and publish the whole calculation. Here’s the thinking.'
+          : 'WhisperFree is preparing optional cloud models. At launch, we’ll bill them at the provider’s cost plus a flat 10¢ per audio hour — and publish the whole calculation. Here’s the thinking.'}
+      </p>
+
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">Local is still free. This is for the hard cases.</h2>
+        <p>
+          The local model runs entirely on your Mac, costs nothing, and is genuinely excellent in a
+          quiet room. For most dictation, it&rsquo;s all you need &mdash; and it stays free.
+        </p>
+        <p>
+          But a small on-device model struggles in exactly the places dictation gets hard:
+          background noise, strong accents, dense jargon and names, and long rambling passages where
+          errors compound. A frontier cloud model handles those much better.
+          {manifest.enabled ? ' So we added one' : ' So we’re preparing one'} &mdash; optional, off
+          by default, and yours to switch on only when you need it.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">The whole business model, in one line</h2>
+        <p>
+          We charge what the provider charges us, plus {margin} an hour for the infrastructure that
+          meters it. That&rsquo;s it. No subscription, no markup games, no &ldquo;contact
+          sales.&rdquo;
+        </p>
+        <p>
+          At launch the one model is {model.label}: the provider&rsquo;s price is about
+          {' '}{providerPrice} per audio hour, we add {margin}, and you pay <strong>{ourPrice} per audio
+          hour</strong>. The same pricing manifest the backend publishes is what renders our
+          {' '}
+          <a href="/pricing" class="text-teal-700 underline">pricing page</a> &mdash; so the
+          published numbers come from the same versioned pricing manifest the app uses. If that
+          manifest cannot be verified, the site treats cloud models as unavailable.
+        </p>
+        <p>
+          Transparency cuts both ways: providers have billing quirks, and those pass through to you
+          rather than getting hidden in a round number. We&rsquo;d rather show the seams than pretend
+          there aren&rsquo;t any.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">Why per-second, not per-month</h2>
+        <p>
+          Most people dictate far less than they assume &mdash; minutes a day, not hours. An audio
+          hour is a <em>lot</em> of talking, and it costs cents. A heavy day of dictation is around
+          15 minutes of audio: roughly <strong>{anchors.perFifteenMinCents}&cent;</strong>.
+          {' '}
+          <strong>$5</strong> of credit lasts roughly
+          {' '}<strong>{anchors.hoursPerFiveDollars} hours</strong> &mdash; about
+          {' '}
+          {anchors.monthsPerFiveDollarsAtOneHourPerWeek} months if you dictate an hour a week.
+        </p>
+        <p>
+          You are billed only for completed cloud transcription. Add credit when you want it;
+          purchased credit does not expire, and there is no recurring subscription.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">The privacy tradeoff, stated plainly</h2>
+        <p>
+          Cloud transcription sends only the clips you choose through WhisperFree&rsquo;s backend to
+          OpenAI. WhisperFree holds audio in request memory and does not persist audio or
+          transcripts. As checked on October 17, 2026, OpenAI lists its audio-transcription endpoint
+          as having no abuse-monitoring or application-state retention, and says API data is not
+          used for training unless the customer opts in. Provider policies can change, so the
+          {' '}
+          <a href="https://developers.openai.com/api/docs/guides/your-data" class="text-teal-700 underline" rel="noopener">live data-controls page</a>
+          remains the source of truth. Local mode avoids the provider entirely.
+        </p>
+
+        <h2 class="text-2xl font-bold text-gray-900 pt-4">Why bother being this open?</h2>
+        <p>
+          Because the brand was built on trust, and transparent pricing is the honest version of
+          that for a paid feature. The 10&cent; buys zero setup, accurate metering, and one-click
+          switching &mdash; and the confidence that we&rsquo;re not quietly marking anything up.
+        </p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-100">
+        <a href="/pricing" class="text-teal-700 underline font-medium">See the full pricing breakdown &rarr;</a>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
